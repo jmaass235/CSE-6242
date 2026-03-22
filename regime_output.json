@@ -1,0 +1,7069 @@
+{
+  "metadata": {
+    "n_regimes": 3,
+    "features_used": [
+      "SP500_return",
+      "yield_spread",
+      "UNRATE",
+      "CPI_change"
+    ],
+    "date_range": {
+      "start": "1997-02-01",
+      "end": "2026-02-01"
+    },
+    "model_date_range": {
+      "start": "1997-05-01",
+      "end": "2026-02-01"
+    },
+    "n_observations": 341,
+    "log_likelihood": -1336.2223,
+    "aic": 2808.4447,
+    "bic": 3069.0127
+  },
+  "regimes": [
+    {
+      "id": 0,
+      "key": "growth",
+      "label": "Low-Vol Growth",
+      "color": "#2ecc71"
+    },
+    {
+      "id": 1,
+      "key": "crisis",
+      "label": "High-Vol Crisis",
+      "color": "#e74c3c"
+    },
+    {
+      "id": 2,
+      "key": "transition",
+      "label": "Transition/Tightening",
+      "color": "#f39c12"
+    }
+  ],
+  "transition_matrix": [
+    [
+      0.980283,
+      0.006535,
+      0.013182
+    ],
+    [
+      0.0,
+      0.967646,
+      0.032354
+    ],
+    [
+      0.038503,
+      0.031855,
+      0.929642
+    ]
+  ],
+  "time_series": [
+    {
+      "date": "1997-02-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 5.19,
+      "SP500": null,
+      "UNRATE": 5.2,
+      "CPI": 159.7,
+      "DGS10": null,
+      "USREC": 0.0,
+      "SP500_return": null,
+      "bond_return": null,
+      "CPI_change": null,
+      "yield_spread": null
+    },
+    {
+      "date": "1997-03-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 5.39,
+      "SP500": null,
+      "UNRATE": 5.2,
+      "CPI": 159.8,
+      "DGS10": null,
+      "USREC": 0.0,
+      "SP500_return": null,
+      "bond_return": null,
+      "CPI_change": 0.0006261740763933155,
+      "yield_spread": null
+    },
+    {
+      "date": "1997-04-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 5.51,
+      "SP500": 759.6400146,
+      "UNRATE": 5.1,
+      "CPI": 159.9,
+      "DGS10": 6.9,
+      "USREC": 0.0,
+      "SP500_return": null,
+      "bond_return": null,
+      "CPI_change": 0.0006257822277846437,
+      "yield_spread": 1.3900000000000006
+    },
+    {
+      "date": "1997-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.5,
+      "SP500": 798.5300293,
+      "UNRATE": 4.9,
+      "CPI": 159.9,
+      "DGS10": 6.69,
+      "USREC": 0.0,
+      "SP500_return": 0.05119532140559779,
+      "bond_return": 0.02465,
+      "CPI_change": 0.0,
+      "yield_spread": 1.1900000000000004
+    },
+    {
+      "date": "1997-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.99885,
+        1e-06,
+        0.001149
+      ],
+      "FEDFUNDS": 5.56,
+      "SP500": 798.5300293,
+      "UNRATE": 5.0,
+      "CPI": 160.2,
+      "DGS10": 6.69,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.005575,
+      "CPI_change": 0.0018761726078797558,
+      "yield_spread": 1.1300000000000008
+    },
+    {
+      "date": "1997-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999308,
+        0.0,
+        0.000692
+      ],
+      "FEDFUNDS": 5.52,
+      "SP500": 891.0300293,
+      "UNRATE": 4.9,
+      "CPI": 160.4,
+      "DGS10": 6.45,
+      "USREC": 0.0,
+      "SP500_return": 0.1158378478027764,
+      "bond_return": 0.02717500000000002,
+      "CPI_change": 0.0012484394506866447,
+      "yield_spread": 0.9300000000000006
+    },
+    {
+      "date": "1997-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999945,
+        0.0,
+        5.5e-05
+      ],
+      "FEDFUNDS": 5.54,
+      "SP500": 947.1400146,
+      "UNRATE": 4.8,
+      "CPI": 160.8,
+      "DGS10": 6.2,
+      "USREC": 0.0,
+      "SP500_return": 0.06297204746744667,
+      "bond_return": 0.027875,
+      "CPI_change": 0.0024937655860348684,
+      "yield_spread": 0.6600000000000001
+    },
+    {
+      "date": "1997-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999969,
+        0.0,
+        3.1e-05
+      ],
+      "FEDFUNDS": 5.54,
+      "SP500": 947.1400146,
+      "UNRATE": 4.9,
+      "CPI": 161.2,
+      "DGS10": 6.2,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.005166666666666667,
+      "CPI_change": 0.0024875621890545485,
+      "yield_spread": 0.6600000000000001
+    },
+    {
+      "date": "1997-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999995,
+        0.0,
+        5e-06
+      ],
+      "FEDFUNDS": 5.5,
+      "SP500": 955.4099731,
+      "UNRATE": 4.7,
+      "CPI": 161.5,
+      "DGS10": 6.04,
+      "USREC": 0.0,
+      "SP500_return": 0.008731505767384018,
+      "bond_return": 0.01956666666666668,
+      "CPI_change": 0.0018610421836229296,
+      "yield_spread": 0.54
+    },
+    {
+      "date": "1997-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999998,
+        0.0,
+        2e-06
+      ],
+      "FEDFUNDS": 5.52,
+      "SP500": 955.4099731,
+      "UNRATE": 4.6,
+      "CPI": 161.7,
+      "DGS10": 6.04,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.005033333333333333,
+      "CPI_change": 0.0012383900928791824,
+      "yield_spread": 0.5200000000000005
+    },
+    {
+      "date": "1997-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 5.5,
+      "SP500": 974.7700195,
+      "UNRATE": 4.7,
+      "CPI": 161.8,
+      "DGS10": 5.86,
+      "USREC": 0.0,
+      "SP500_return": 0.02026360090965218,
+      "bond_return": 0.02123333333333331,
+      "CPI_change": 0.0006184291898578831,
+      "yield_spread": 0.3600000000000003
+    },
+    {
+      "date": "1998-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.56,
+      "SP500": 974.7700195,
+      "UNRATE": 4.6,
+      "CPI": 162.0,
+      "DGS10": 5.86,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004883333333333333,
+      "CPI_change": 0.0012360939431395046,
+      "yield_spread": 0.3000000000000007
+    },
+    {
+      "date": "1998-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.51,
+      "SP500": 974.7700195,
+      "UNRATE": 4.6,
+      "CPI": 162.0,
+      "DGS10": 5.86,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004883333333333333,
+      "CPI_change": 0.0,
+      "yield_spread": 0.35000000000000053
+    },
+    {
+      "date": "1998-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 5.49,
+      "SP500": 974.7700195,
+      "UNRATE": 4.7,
+      "CPI": 162.0,
+      "DGS10": 5.86,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004883333333333333,
+      "CPI_change": 0.0,
+      "yield_spread": 0.3700000000000001
+    },
+    {
+      "date": "1998-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.45,
+      "SP500": 1108.150024,
+      "UNRATE": 4.3,
+      "CPI": 162.2,
+      "DGS10": 5.62,
+      "USREC": 0.0,
+      "SP500_return": 0.13683228026280103,
+      "bond_return": 0.026483333333333352,
+      "CPI_change": 0.0012345679012344402,
+      "yield_spread": 0.16999999999999993
+    },
+    {
+      "date": "1998-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.49,
+      "SP500": 1121.0,
+      "UNRATE": 4.4,
+      "CPI": 162.6,
+      "DGS10": 5.67,
+      "USREC": 0.0,
+      "SP500_return": 0.011595881172854705,
+      "bond_return": 0.00018333333333334957,
+      "CPI_change": 0.002466091245376223,
+      "yield_spread": 0.17999999999999972
+    },
+    {
+      "date": "1998-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.56,
+      "SP500": 1090.97998,
+      "UNRATE": 4.5,
+      "CPI": 162.8,
+      "DGS10": 5.53,
+      "USREC": 0.0,
+      "SP500_return": -0.026779678858162348,
+      "bond_return": 0.017324999999999972,
+      "CPI_change": 0.0012300123001232066,
+      "yield_spread": -0.02999999999999936
+    },
+    {
+      "date": "1998-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.54,
+      "SP500": 1148.560059,
+      "UNRATE": 4.5,
+      "CPI": 163.2,
+      "DGS10": 5.44,
+      "USREC": 0.0,
+      "SP500_return": 0.052778309460820516,
+      "bond_return": 0.012708333333333321,
+      "CPI_change": 0.002457002457002311,
+      "yield_spread": -0.09999999999999964
+    },
+    {
+      "date": "1998-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.55,
+      "SP500": 1148.560059,
+      "UNRATE": 4.5,
+      "CPI": 163.4,
+      "DGS10": 5.44,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004533333333333334,
+      "CPI_change": 0.001225490196078427,
+      "yield_spread": -0.10999999999999943
+    },
+    {
+      "date": "1998-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.51,
+      "SP500": 994.2600098,
+      "UNRATE": 4.6,
+      "CPI": 163.5,
+      "DGS10": 5.05,
+      "USREC": 0.0,
+      "SP500_return": -0.13434216869280835,
+      "bond_return": 0.03963333333333338,
+      "CPI_change": 0.000611995104039087,
+      "yield_spread": -0.45999999999999996
+    },
+    {
+      "date": "1998-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.07,
+      "SP500": 986.3900146,
+      "UNRATE": 4.5,
+      "CPI": 163.9,
+      "DGS10": 4.33,
+      "USREC": 0.0,
+      "SP500_return": -0.007915429688842845,
+      "bond_return": 0.06900833333333331,
+      "CPI_change": 0.0024464831804280607,
+      "yield_spread": -0.7400000000000002
+    },
+    {
+      "date": "1998-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.83,
+      "SP500": 986.3900146,
+      "UNRATE": 4.4,
+      "CPI": 164.1,
+      "DGS10": 4.33,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003608333333333333,
+      "CPI_change": 0.0012202562538132788,
+      "yield_spread": -0.5
+    },
+    {
+      "date": "1998-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 4.68,
+      "SP500": 1175.280029,
+      "UNRATE": 4.4,
+      "CPI": 164.4,
+      "DGS10": 4.67,
+      "USREC": 0.0,
+      "SP500_return": 0.19149627591941765,
+      "bond_return": -0.026991666666666657,
+      "CPI_change": 0.001828153564899626,
+      "yield_spread": -0.009999999999999787
+    },
+    {
+      "date": "1999-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.63,
+      "SP500": 1175.280029,
+      "UNRATE": 4.3,
+      "CPI": 164.7,
+      "DGS10": 4.67,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0038916666666666665,
+      "CPI_change": 0.0018248175182480342,
+      "yield_spread": 0.040000000000000036
+    },
+    {
+      "date": "1999-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.76,
+      "SP500": 1273.0,
+      "UNRATE": 4.4,
+      "CPI": 164.7,
+      "DGS10": 4.75,
+      "USREC": 0.0,
+      "SP500_return": 0.08314611717102527,
+      "bond_return": -0.00330833333333334,
+      "CPI_change": 0.0,
+      "yield_spread": -0.009999999999999787
+    },
+    {
+      "date": "1999-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999997,
+        0.0,
+        3e-06
+      ],
+      "FEDFUNDS": 4.81,
+      "SP500": 1236.160034,
+      "UNRATE": 4.2,
+      "CPI": 164.8,
+      "DGS10": 5.4,
+      "USREC": 0.0,
+      "SP500_return": -0.028939486252945845,
+      "bond_return": -0.0545416666666667,
+      "CPI_change": 0.0006071645415908211,
+      "yield_spread": 0.5900000000000007
+    },
+    {
+      "date": "1999-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999758,
+        0.0,
+        0.000242
+      ],
+      "FEDFUNDS": 4.74,
+      "SP500": 1293.719971,
+      "UNRATE": 4.3,
+      "CPI": 165.9,
+      "DGS10": 5.27,
+      "USREC": 0.0,
+      "SP500_return": 0.04656349939881643,
+      "bond_return": 0.01620000000000007,
+      "CPI_change": 0.006674757281553312,
+      "yield_spread": 0.5299999999999994
+    },
+    {
+      "date": "1999-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999998,
+        0.0,
+        2e-06
+      ],
+      "FEDFUNDS": 4.74,
+      "SP500": 1293.719971,
+      "UNRATE": 4.2,
+      "CPI": 166.0,
+      "DGS10": 5.27,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004391666666666666,
+      "CPI_change": 0.0006027727546713546,
+      "yield_spread": 0.5299999999999994
+    },
+    {
+      "date": "1999-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999947,
+        0.0,
+        5.3e-05
+      ],
+      "FEDFUNDS": 4.76,
+      "SP500": 1294.26001,
+      "UNRATE": 4.3,
+      "CPI": 166.0,
+      "DGS10": 5.78,
+      "USREC": 0.0,
+      "SP500_return": 0.0004174311381948126,
+      "bond_return": -0.04150833333333339,
+      "CPI_change": 0.0,
+      "yield_spread": 1.0200000000000005
+    },
+    {
+      "date": "1999-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.99983,
+        0.0,
+        0.00017
+      ],
+      "FEDFUNDS": 4.99,
+      "SP500": 1380.959961,
+      "UNRATE": 4.3,
+      "CPI": 166.7,
+      "DGS10": 5.85,
+      "USREC": 0.0,
+      "SP500_return": 0.06698804747896059,
+      "bond_return": -0.0014833333333332784,
+      "CPI_change": 0.004216867469879482,
+      "yield_spread": 0.8599999999999994
+    },
+    {
+      "date": "1999-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999978,
+        0.0,
+        2.2e-05
+      ],
+      "FEDFUNDS": 5.07,
+      "SP500": 1380.959961,
+      "UNRATE": 4.2,
+      "CPI": 167.1,
+      "DGS10": 5.85,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004875,
+      "CPI_change": 0.002399520095980767,
+      "yield_spread": 0.7799999999999994
+    },
+    {
+      "date": "1999-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999934,
+        0.0,
+        6.6e-05
+      ],
+      "FEDFUNDS": 5.22,
+      "SP500": 1331.069946,
+      "UNRATE": 4.2,
+      "CPI": 167.8,
+      "DGS10": 5.99,
+      "USREC": 0.0,
+      "SP500_return": -0.03612705393998017,
+      "bond_return": -0.00772500000000005,
+      "CPI_change": 0.00418910831837227,
+      "yield_spread": 0.7700000000000005
+    },
+    {
+      "date": "1999-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999986,
+        0.0,
+        1.4e-05
+      ],
+      "FEDFUNDS": 5.2,
+      "SP500": 1282.810059,
+      "UNRATE": 4.1,
+      "CPI": 168.1,
+      "DGS10": 6.0,
+      "USREC": 0.0,
+      "SP500_return": -0.03625646206273836,
+      "bond_return": 0.004091666666666686,
+      "CPI_change": 0.0017878426698449967,
+      "yield_spread": 0.7999999999999998
+    },
+    {
+      "date": "1999-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999994,
+        0.0,
+        6e-06
+      ],
+      "FEDFUNDS": 5.42,
+      "SP500": 1354.119995,
+      "UNRATE": 4.1,
+      "CPI": 168.4,
+      "DGS10": 6.06,
+      "USREC": 0.0,
+      "SP500_return": 0.055588850040347415,
+      "bond_return": -0.0003999999999999646,
+      "CPI_change": 0.0017846519928614857,
+      "yield_spread": 0.6399999999999997
+    },
+    {
+      "date": "1999-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999964,
+        0.0,
+        3.6e-05
+      ],
+      "FEDFUNDS": 5.3,
+      "SP500": 1397.719971,
+      "UNRATE": 4.0,
+      "CPI": 168.8,
+      "DGS10": 6.21,
+      "USREC": 0.0,
+      "SP500_return": 0.032198015065865615,
+      "bond_return": -0.008450000000000034,
+      "CPI_change": 0.002375296912114022,
+      "yield_spread": 0.9100000000000001
+    },
+    {
+      "date": "2000-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999979,
+        0.0,
+        2.1e-05
+      ],
+      "FEDFUNDS": 5.45,
+      "SP500": 1397.719971,
+      "UNRATE": 4.0,
+      "CPI": 169.3,
+      "DGS10": 6.21,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.005175,
+      "CPI_change": 0.002962085308056972,
+      "yield_spread": 0.7599999999999998
+    },
+    {
+      "date": "2000-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999886,
+        0.0,
+        0.000114
+      ],
+      "FEDFUNDS": 5.73,
+      "SP500": 1409.280029,
+      "UNRATE": 4.1,
+      "CPI": 170.0,
+      "DGS10": 6.62,
+      "USREC": 0.0,
+      "SP500_return": 0.008270653807521455,
+      "bond_return": -0.03172500000000002,
+      "CPI_change": 0.0041346721795627595,
+      "yield_spread": 0.8899999999999997
+    },
+    {
+      "date": "2000-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999914,
+        0.0,
+        8.6e-05
+      ],
+      "FEDFUNDS": 5.85,
+      "SP500": 1379.189941,
+      "UNRATE": 4.0,
+      "CPI": 171.0,
+      "DGS10": 6.39,
+      "USREC": 0.0,
+      "SP500_return": -0.021351390341741605,
+      "bond_return": 0.026216666666666704,
+      "CPI_change": 0.00588235294117645,
+      "yield_spread": 0.54
+    },
+    {
+      "date": "2000-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.02,
+      "SP500": 1379.189941,
+      "UNRATE": 3.8,
+      "CPI": 170.9,
+      "DGS10": 6.39,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.005325,
+      "CPI_change": -0.0005847953216373547,
+      "yield_spread": 0.3700000000000001
+    },
+    {
+      "date": "2000-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.27,
+      "SP500": 1468.25,
+      "UNRATE": 4.0,
+      "CPI": 171.2,
+      "DGS10": 6.29,
+      "USREC": 0.0,
+      "SP500_return": 0.06457417963433354,
+      "bond_return": 0.014324999999999968,
+      "CPI_change": 0.0017554125219425565,
+      "yield_spread": 0.020000000000000462
+    },
+    {
+      "date": "2000-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.53,
+      "SP500": 1448.810059,
+      "UNRATE": 4.0,
+      "CPI": 172.2,
+      "DGS10": 6.2,
+      "USREC": 0.0,
+      "SP500_return": -0.013240211816788805,
+      "bond_return": 0.013341666666666654,
+      "CPI_change": 0.005841121495327117,
+      "yield_spread": -0.33000000000000007
+    },
+    {
+      "date": "2000-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.54,
+      "SP500": 1448.810059,
+      "UNRATE": 4.0,
+      "CPI": 172.7,
+      "DGS10": 6.2,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.005166666666666667,
+      "CPI_change": 0.0029036004645761615,
+      "yield_spread": -0.33999999999999986
+    },
+    {
+      "date": "2000-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.5,
+      "SP500": 1438.099976,
+      "UNRATE": 4.1,
+      "CPI": 172.7,
+      "DGS10": 6.0,
+      "USREC": 0.0,
+      "SP500_return": -0.007392330646428746,
+      "bond_return": 0.023166666666666683,
+      "CPI_change": 0.0,
+      "yield_spread": -0.5
+    },
+    {
+      "date": "2000-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.52,
+      "SP500": 1520.77002,
+      "UNRATE": 3.9,
+      "CPI": 173.6,
+      "DGS10": 5.68,
+      "USREC": 0.0,
+      "SP500_return": 0.05748560279511472,
+      "bond_return": 0.033800000000000024,
+      "CPI_change": 0.005211349160393786,
+      "yield_spread": -0.8399999999999999
+    },
+    {
+      "date": "2000-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.51,
+      "SP500": 1520.77002,
+      "UNRATE": 3.9,
+      "CPI": 173.9,
+      "DGS10": 5.68,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004733333333333333,
+      "CPI_change": 0.001728110599078514,
+      "yield_spread": -0.8300000000000001
+    },
+    {
+      "date": "2000-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.51,
+      "SP500": 1421.219971,
+      "UNRATE": 3.9,
+      "CPI": 174.2,
+      "DGS10": 5.74,
+      "USREC": 0.0,
+      "SP500_return": -0.06546029162252942,
+      "bond_return": -0.0006666666666667112,
+      "CPI_change": 0.0017251293847038163,
+      "yield_spread": -0.7699999999999996
+    },
+    {
+      "date": "2000-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 6.4,
+      "SP500": 1315.22998,
+      "UNRATE": 3.9,
+      "CPI": 174.6,
+      "DGS10": 5.52,
+      "USREC": 0.0,
+      "SP500_return": -0.07457676725821916,
+      "bond_return": 0.02458333333333339,
+      "CPI_change": 0.0022962112514350874,
+      "yield_spread": -0.8800000000000008
+    },
+    {
+      "date": "2001-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.98,
+      "SP500": 1315.22998,
+      "UNRATE": 4.2,
+      "CPI": 175.6,
+      "DGS10": 5.52,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0046,
+      "CPI_change": 0.00572737686139746,
+      "yield_spread": -0.46000000000000085
+    },
+    {
+      "date": "2001-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.49,
+      "SP500": 1373.469971,
+      "UNRATE": 4.2,
+      "CPI": 176.0,
+      "DGS10": 5.1,
+      "USREC": 0.0,
+      "SP500_return": 0.04428122220875763,
+      "bond_return": 0.04239999999999999,
+      "CPI_change": 0.002277904328018332,
+      "yield_spread": -0.39000000000000057
+    },
+    {
+      "date": "2001-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.31,
+      "SP500": 1241.22998,
+      "UNRATE": 4.3,
+      "CPI": 176.1,
+      "DGS10": 4.87,
+      "USREC": 0.0,
+      "SP500_return": -0.09628167618671579,
+      "bond_return": 0.02494999999999996,
+      "CPI_change": 0.0005681818181817455,
+      "yield_spread": -0.4399999999999995
+    },
+    {
+      "date": "2001-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999974,
+        1e-06,
+        2.4e-05
+      ],
+      "FEDFUNDS": 4.8,
+      "SP500": 1241.22998,
+      "UNRATE": 4.4,
+      "CPI": 176.4,
+      "DGS10": 4.87,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004058333333333333,
+      "CPI_change": 0.0017035775127769437,
+      "yield_spread": 0.07000000000000028
+    },
+    {
+      "date": "2001-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.560599,
+        9.3e-05,
+        0.439307
+      ],
+      "FEDFUNDS": 4.21,
+      "SP500": 1266.439941,
+      "UNRATE": 4.3,
+      "CPI": 177.3,
+      "DGS10": 5.3,
+      "USREC": 1.0,
+      "SP500_return": 0.020310467363993334,
+      "bond_return": -0.03464166666666665,
+      "CPI_change": 0.005102040816326481,
+      "yield_spread": 1.0899999999999999
+    },
+    {
+      "date": "2001-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.272475,
+        0.000228,
+        0.727296
+      ],
+      "FEDFUNDS": 3.97,
+      "SP500": 1260.670044,
+      "UNRATE": 4.5,
+      "CPI": 177.7,
+      "DGS10": 5.39,
+      "USREC": 1.0,
+      "SP500_return": -0.004555997338053119,
+      "bond_return": -0.0036833333333333206,
+      "CPI_change": 0.002256063169768563,
+      "yield_spread": 1.4199999999999995
+    },
+    {
+      "date": "2001-07-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.055395,
+        8.6e-05,
+        0.944519
+      ],
+      "FEDFUNDS": 3.77,
+      "SP500": 1260.670044,
+      "UNRATE": 4.6,
+      "CPI": 177.4,
+      "DGS10": 5.39,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004491666666666666,
+      "CPI_change": -0.0016882386043892694,
+      "yield_spread": 1.6199999999999997
+    },
+    {
+      "date": "2001-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.008302,
+        8.9e-05,
+        0.991609
+      ],
+      "FEDFUNDS": 3.65,
+      "SP500": 1215.930054,
+      "UNRATE": 4.9,
+      "CPI": 177.4,
+      "DGS10": 5.11,
+      "USREC": 1.0,
+      "SP500_return": -0.03548905616734088,
+      "bond_return": 0.02969166666666661,
+      "CPI_change": 0.0,
+      "yield_spread": 1.4600000000000004
+    },
+    {
+      "date": "2001-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000128,
+        0.000154,
+        0.999718
+      ],
+      "FEDFUNDS": 3.07,
+      "SP500": 1215.930054,
+      "UNRATE": 5.0,
+      "CPI": 178.1,
+      "DGS10": 5.11,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004258333333333334,
+      "CPI_change": 0.003945885005636862,
+      "yield_spread": 2.0400000000000005
+    },
+    {
+      "date": "2001-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        7.8e-05,
+        0.999922
+      ],
+      "FEDFUNDS": 2.49,
+      "SP500": 1038.550049,
+      "UNRATE": 5.3,
+      "CPI": 177.6,
+      "DGS10": 4.55,
+      "USREC": 1.0,
+      "SP500_return": -0.14588010586339206,
+      "bond_return": 0.05465833333333338,
+      "CPI_change": -0.0028074115665356336,
+      "yield_spread": 2.0599999999999996
+    },
+    {
+      "date": "2001-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2e-06,
+        0.004659,
+        0.99534
+      ],
+      "FEDFUNDS": 2.09,
+      "SP500": 1084.099976,
+      "UNRATE": 5.5,
+      "CPI": 177.5,
+      "DGS10": 4.24,
+      "USREC": 1.0,
+      "SP500_return": 0.04385915444697064,
+      "bond_return": 0.03169166666666663,
+      "CPI_change": -0.0005630630630630851,
+      "yield_spread": 2.1500000000000004
+    },
+    {
+      "date": "2001-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        0.081549,
+        0.91845
+      ],
+      "FEDFUNDS": 1.82,
+      "SP500": 1084.099976,
+      "UNRATE": 5.7,
+      "CPI": 177.4,
+      "DGS10": 4.24,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0035333333333333336,
+      "CPI_change": -0.0005633802816901179,
+      "yield_spread": 2.42
+    },
+    {
+      "date": "2002-01-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        0.521555,
+        0.478443
+      ],
+      "FEDFUNDS": 1.73,
+      "SP500": 1084.099976,
+      "UNRATE": 5.7,
+      "CPI": 177.7,
+      "DGS10": 4.24,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0035333333333333336,
+      "CPI_change": 0.0016910935738443378,
+      "yield_spread": 2.5100000000000002
+    },
+    {
+      "date": "2002-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.996573,
+        0.003427
+      ],
+      "FEDFUNDS": 1.74,
+      "SP500": 1122.199951,
+      "UNRATE": 5.7,
+      "CPI": 178.0,
+      "DGS10": 5.02,
+      "USREC": 0.0,
+      "SP500_return": 0.03514433709386977,
+      "bond_return": -0.06666666666666661,
+      "CPI_change": 0.0016882386043894915,
+      "yield_spread": 3.2799999999999994
+    },
+    {
+      "date": "2002-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999975,
+        2.5e-05
+      ],
+      "FEDFUNDS": 1.73,
+      "SP500": 1131.780029,
+      "UNRATE": 5.7,
+      "CPI": 178.5,
+      "DGS10": 4.98,
+      "USREC": 0.0,
+      "SP500_return": 0.00853687258804725,
+      "bond_return": 0.007783333333333257,
+      "CPI_change": 0.002808988764045006,
+      "yield_spread": 3.2500000000000004
+    },
+    {
+      "date": "2002-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 1.75,
+      "SP500": 1146.540039,
+      "UNRATE": 5.9,
+      "CPI": 179.3,
+      "DGS10": 5.44,
+      "USREC": 0.0,
+      "SP500_return": 0.01304141230786815,
+      "bond_return": -0.03725,
+      "CPI_change": 0.004481792717086819,
+      "yield_spread": 3.6900000000000004
+    },
+    {
+      "date": "2002-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999982,
+        1.8e-05
+      ],
+      "FEDFUNDS": 1.75,
+      "SP500": 1086.459961,
+      "UNRATE": 5.8,
+      "CPI": 179.5,
+      "DGS10": 5.08,
+      "USREC": 0.0,
+      "SP500_return": -0.052401203583261835,
+      "bond_return": 0.03693333333333336,
+      "CPI_change": 0.001115448968209698,
+      "yield_spread": 3.33
+    },
+    {
+      "date": "2002-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999963,
+        3.7e-05
+      ],
+      "FEDFUNDS": 1.75,
+      "SP500": 1086.459961,
+      "UNRATE": 5.8,
+      "CPI": 179.6,
+      "DGS10": 5.08,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004233333333333334,
+      "CPI_change": 0.0005571030640667551,
+      "yield_spread": 3.33
+    },
+    {
+      "date": "2002-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.998575,
+        0.001425
+      ],
+      "FEDFUNDS": 1.73,
+      "SP500": 968.6500244,
+      "UNRATE": 5.8,
+      "CPI": 180.0,
+      "DGS10": 4.85,
+      "USREC": 0.0,
+      "SP500_return": -0.10843467852378597,
+      "bond_return": 0.02493333333333337,
+      "CPI_change": 0.00222717149220486,
+      "yield_spread": 3.1199999999999997
+    },
+    {
+      "date": "2002-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.990427,
+        0.009573
+      ],
+      "FEDFUNDS": 1.74,
+      "SP500": 884.6599731,
+      "UNRATE": 5.7,
+      "CPI": 180.5,
+      "DGS10": 4.47,
+      "USREC": 0.0,
+      "SP500_return": -0.08670835614960626,
+      "bond_return": 0.03824166666666665,
+      "CPI_change": 0.002777777777777768,
+      "yield_spread": 2.7299999999999995
+    },
+    {
+      "date": "2002-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.985851,
+        0.014149
+      ],
+      "FEDFUNDS": 1.75,
+      "SP500": 884.6599731,
+      "UNRATE": 5.7,
+      "CPI": 180.8,
+      "DGS10": 4.47,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0037249999999999996,
+      "CPI_change": 0.0016620498614958734,
+      "yield_spread": 2.7199999999999998
+    },
+    {
+      "date": "2002-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.973002,
+        0.026998
+      ],
+      "FEDFUNDS": 1.75,
+      "SP500": 847.9099731,
+      "UNRATE": 5.7,
+      "CPI": 181.2,
+      "DGS10": 3.72,
+      "USREC": 0.0,
+      "SP500_return": -0.04154138439339772,
+      "bond_return": 0.07122499999999997,
+      "CPI_change": 0.0022123893805308104,
+      "yield_spread": 1.9700000000000002
+    },
+    {
+      "date": "2002-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.987537,
+        0.012463
+      ],
+      "FEDFUNDS": 1.34,
+      "SP500": 900.960022,
+      "UNRATE": 5.9,
+      "CPI": 181.5,
+      "DGS10": 4.01,
+      "USREC": 0.0,
+      "SP500_return": 0.06256566213751014,
+      "bond_return": -0.022999999999999965,
+      "CPI_change": 0.0016556291390728006,
+      "yield_spread": 2.67
+    },
+    {
+      "date": "2002-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.990527,
+        0.009473
+      ],
+      "FEDFUNDS": 1.24,
+      "SP500": 900.960022,
+      "UNRATE": 6.0,
+      "CPI": 181.8,
+      "DGS10": 4.01,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033416666666666664,
+      "CPI_change": 0.0016528925619836432,
+      "yield_spread": 2.7699999999999996
+    },
+    {
+      "date": "2003-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.984227,
+        0.015773
+      ],
+      "FEDFUNDS": 1.24,
+      "SP500": 900.960022,
+      "UNRATE": 5.8,
+      "CPI": 182.6,
+      "DGS10": 4.01,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033416666666666664,
+      "CPI_change": 0.004400440044004306,
+      "yield_spread": 2.7699999999999996
+    },
+    {
+      "date": "2003-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.929695,
+        0.070305
+      ],
+      "FEDFUNDS": 1.26,
+      "SP500": 900.960022,
+      "UNRATE": 5.9,
+      "CPI": 183.6,
+      "DGS10": 4.01,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033416666666666664,
+      "CPI_change": 0.005476451259583737,
+      "yield_spread": 2.75
+    },
+    {
+      "date": "2003-03-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 1.25,
+      "SP500": null,
+      "UNRATE": 5.9,
+      "CPI": 183.9,
+      "DGS10": null,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": null,
+      "CPI_change": 0.0016339869281045694,
+      "yield_spread": null
+    },
+    {
+      "date": "2003-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.543619,
+        0.456381
+      ],
+      "FEDFUNDS": 1.26,
+      "SP500": 858.4799805,
+      "UNRATE": 6.0,
+      "CPI": 183.2,
+      "DGS10": 3.84,
+      "USREC": 0.0,
+      "SP500_return": -0.04714975188987902,
+      "bond_return": null,
+      "CPI_change": -0.0038064165307233333,
+      "yield_spread": 2.58
+    },
+    {
+      "date": "2003-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.584154,
+        0.415846
+      ],
+      "FEDFUNDS": 1.26,
+      "SP500": 916.2999878,
+      "UNRATE": 6.1,
+      "CPI": 182.9,
+      "DGS10": 3.88,
+      "USREC": 0.0,
+      "SP500_return": 0.06735160820677999,
+      "bond_return": -0.00040000000000000365,
+      "CPI_change": -0.0016375545851528006,
+      "yield_spread": 2.62
+    },
+    {
+      "date": "2003-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.915004,
+        0.084996
+      ],
+      "FEDFUNDS": 1.22,
+      "SP500": 916.2999878,
+      "UNRATE": 6.3,
+      "CPI": 183.1,
+      "DGS10": 3.88,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0032333333333333333,
+      "CPI_change": 0.0010934937124111865,
+      "yield_spread": 2.66
+    },
+    {
+      "date": "2003-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.99357,
+        0.00643
+      ],
+      "FEDFUNDS": 1.01,
+      "SP500": 982.3200073,
+      "UNRATE": 6.2,
+      "CPI": 183.7,
+      "DGS10": 3.56,
+      "USREC": 0.0,
+      "SP500_return": 0.07205066067774535,
+      "bond_return": 0.032033333333333316,
+      "CPI_change": 0.003276897870016393,
+      "yield_spread": 2.55
+    },
+    {
+      "date": "2003-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999995,
+        5e-06
+      ],
+      "FEDFUNDS": 1.03,
+      "SP500": 980.1500244,
+      "UNRATE": 6.1,
+      "CPI": 184.5,
+      "DGS10": 4.44,
+      "USREC": 0.0,
+      "SP500_return": -0.0022090386878756973,
+      "bond_return": -0.07623333333333336,
+      "CPI_change": 0.004354926510615087,
+      "yield_spread": 3.41
+    },
+    {
+      "date": "2003-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999998,
+        2e-06
+      ],
+      "FEDFUNDS": 1.01,
+      "SP500": 980.1500244,
+      "UNRATE": 6.1,
+      "CPI": 185.1,
+      "DGS10": 4.44,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0037,
+      "CPI_change": 0.003252032520325132,
+      "yield_spread": 3.4300000000000006
+    },
+    {
+      "date": "2003-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.998798,
+        0.001202
+      ],
+      "FEDFUNDS": 1.01,
+      "SP500": 1018.219971,
+      "UNRATE": 6.0,
+      "CPI": 184.9,
+      "DGS10": 3.96,
+      "USREC": 0.0,
+      "SP500_return": 0.03884093827708113,
+      "bond_return": 0.04690000000000004,
+      "CPI_change": -0.0010804970286331095,
+      "yield_spread": 2.95
+    },
+    {
+      "date": "2003-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.99958,
+        0.00042
+      ],
+      "FEDFUNDS": 1.0,
+      "SP500": 1018.219971,
+      "UNRATE": 5.8,
+      "CPI": 185.0,
+      "DGS10": 3.96,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033,
+      "CPI_change": 0.0005408328826392861,
+      "yield_spread": 2.96
+    },
+    {
+      "date": "2003-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999999,
+        1e-06
+      ],
+      "FEDFUNDS": 0.98,
+      "SP500": 1070.119995,
+      "UNRATE": 5.7,
+      "CPI": 185.5,
+      "DGS10": 4.4,
+      "USREC": 0.0,
+      "SP500_return": 0.050971327884119955,
+      "bond_return": -0.03630000000000004,
+      "CPI_change": 0.002702702702702675,
+      "yield_spread": 3.4200000000000004
+    },
+    {
+      "date": "2004-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999999,
+        1e-06
+      ],
+      "FEDFUNDS": 1.0,
+      "SP500": 1070.119995,
+      "UNRATE": 5.7,
+      "CPI": 186.3,
+      "DGS10": 4.4,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003666666666666667,
+      "CPI_change": 0.004312668463611891,
+      "yield_spread": 3.4000000000000004
+    },
+    {
+      "date": "2004-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999997,
+        3e-06
+      ],
+      "FEDFUNDS": 1.01,
+      "SP500": 1070.119995,
+      "UNRATE": 5.6,
+      "CPI": 186.7,
+      "DGS10": 4.4,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003666666666666667,
+      "CPI_change": 0.0021470746108425143,
+      "yield_spread": 3.3900000000000006
+    },
+    {
+      "date": "2004-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999953,
+        4.7e-05
+      ],
+      "FEDFUNDS": 1.0,
+      "SP500": 1155.969971,
+      "UNRATE": 5.8,
+      "CPI": 187.1,
+      "DGS10": 4.0,
+      "USREC": 0.0,
+      "SP500_return": 0.08022462565050947,
+      "bond_return": 0.0396666666666667,
+      "CPI_change": 0.002142474558114671,
+      "yield_spread": 3.0
+    },
+    {
+      "date": "2004-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999781,
+        0.000219
+      ],
+      "FEDFUNDS": 1.0,
+      "SP500": 1132.170044,
+      "UNRATE": 5.6,
+      "CPI": 187.4,
+      "DGS10": 3.91,
+      "USREC": 0.0,
+      "SP500_return": -0.020588706970831927,
+      "bond_return": 0.011433333333333321,
+      "CPI_change": 0.0016034206306787535,
+      "yield_spread": 2.91
+    },
+    {
+      "date": "2004-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999914,
+        8.6e-05
+      ],
+      "FEDFUNDS": 1.0,
+      "SP500": 1132.170044,
+      "UNRATE": 5.6,
+      "CPI": 188.2,
+      "DGS10": 3.91,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0032583333333333336,
+      "CPI_change": 0.004268943436499306,
+      "yield_spread": 2.91
+    },
+    {
+      "date": "2004-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 1.03,
+      "SP500": 1121.199951,
+      "UNRATE": 5.6,
+      "CPI": 188.9,
+      "DGS10": 4.71,
+      "USREC": 0.0,
+      "SP500_return": -0.009689439371882824,
+      "bond_return": -0.06874166666666665,
+      "CPI_change": 0.0037194473963868546,
+      "yield_spread": 3.6799999999999997
+    },
+    {
+      "date": "2004-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999802,
+        0.000198
+      ],
+      "FEDFUNDS": 1.26,
+      "SP500": 1128.939941,
+      "UNRATE": 5.5,
+      "CPI": 189.1,
+      "DGS10": 4.57,
+      "USREC": 0.0,
+      "SP500_return": 0.006903309256387935,
+      "bond_return": 0.01652499999999997,
+      "CPI_change": 0.001058761249338236,
+      "yield_spread": 3.3100000000000005
+    },
+    {
+      "date": "2004-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.980671,
+        0.019329
+      ],
+      "FEDFUNDS": 1.43,
+      "SP500": 1128.939941,
+      "UNRATE": 5.4,
+      "CPI": 189.2,
+      "DGS10": 4.57,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0038083333333333337,
+      "CPI_change": 0.0005288207297726721,
+      "yield_spread": 3.1400000000000006
+    },
+    {
+      "date": "2004-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.645373,
+        0.354627
+      ],
+      "FEDFUNDS": 1.61,
+      "SP500": 1105.910034,
+      "UNRATE": 5.4,
+      "CPI": 189.8,
+      "DGS10": 4.13,
+      "USREC": 0.0,
+      "SP500_return": -0.020399585632164374,
+      "bond_return": 0.04340833333333337,
+      "CPI_change": 0.003171247357294016,
+      "yield_spread": 2.5199999999999996
+    },
+    {
+      "date": "2004-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.367258,
+        0.632742
+      ],
+      "FEDFUNDS": 1.76,
+      "SP500": 1131.5,
+      "UNRATE": 5.5,
+      "CPI": 190.8,
+      "DGS10": 4.21,
+      "USREC": 0.0,
+      "SP500_return": 0.023139283678838662,
+      "bond_return": -0.00375833333333334,
+      "CPI_change": 0.005268703898840821,
+      "yield_spread": 2.45
+    },
+    {
+      "date": "2004-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.066063,
+        0.933937
+      ],
+      "FEDFUNDS": 1.93,
+      "SP500": 1130.51001,
+      "UNRATE": 5.4,
+      "CPI": 191.7,
+      "DGS10": 4.11,
+      "USREC": 0.0,
+      "SP500_return": -0.0008749359257622658,
+      "bond_return": 0.012508333333333302,
+      "CPI_change": 0.004716981132075304,
+      "yield_spread": 2.1800000000000006
+    },
+    {
+      "date": "2004-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        0.005827,
+        0.994172
+      ],
+      "FEDFUNDS": 2.16,
+      "SP500": 1191.369995,
+      "UNRATE": 5.4,
+      "CPI": 191.7,
+      "DGS10": 4.38,
+      "USREC": 0.0,
+      "SP500_return": 0.05383409652427584,
+      "bond_return": -0.02087499999999996,
+      "CPI_change": 0.0,
+      "yield_spread": 2.2199999999999998
+    },
+    {
+      "date": "2005-01-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2e-06,
+        0.000406,
+        0.999592
+      ],
+      "FEDFUNDS": 2.28,
+      "SP500": 1191.369995,
+      "UNRATE": 5.3,
+      "CPI": 191.6,
+      "DGS10": 4.38,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.00365,
+      "CPI_change": -0.0005216484089722861,
+      "yield_spread": 2.1
+    },
+    {
+      "date": "2005-02-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        3e-06,
+        0.000108,
+        0.99989
+      ],
+      "FEDFUNDS": 2.5,
+      "SP500": 1189.410034,
+      "UNRATE": 5.4,
+      "CPI": 192.4,
+      "DGS10": 4.15,
+      "USREC": 0.0,
+      "SP500_return": -0.0016451320817425508,
+      "bond_return": 0.02434999999999996,
+      "CPI_change": 0.0041753653444676075,
+      "yield_spread": 1.6500000000000004
+    },
+    {
+      "date": "2005-03-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        8e-06,
+        0.000101,
+        0.999891
+      ],
+      "FEDFUNDS": 2.63,
+      "SP500": 1210.410034,
+      "UNRATE": 5.2,
+      "CPI": 193.1,
+      "DGS10": 4.38,
+      "USREC": 0.0,
+      "SP500_return": 0.017655812041013963,
+      "bond_return": -0.017241666666666624,
+      "CPI_change": 0.0036382536382535413,
+      "yield_spread": 1.75
+    },
+    {
+      "date": "2005-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1.3e-05,
+        5.7e-05,
+        0.99993
+      ],
+      "FEDFUNDS": 2.79,
+      "SP500": 1172.920044,
+      "UNRATE": 5.2,
+      "CPI": 193.7,
+      "DGS10": 4.46,
+      "USREC": 0.0,
+      "SP500_return": -0.030972966967324433,
+      "bond_return": -0.0035500000000000067,
+      "CPI_change": 0.0031071983428274663,
+      "yield_spread": 1.67
+    },
+    {
+      "date": "2005-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000413,
+        5.5e-05,
+        0.999533
+      ],
+      "FEDFUNDS": 3.0,
+      "SP500": 1172.920044,
+      "UNRATE": 5.1,
+      "CPI": 193.6,
+      "DGS10": 4.46,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0037166666666666667,
+      "CPI_change": -0.0005162622612286949,
+      "yield_spread": 1.46
+    },
+    {
+      "date": "2005-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.004333,
+        0.000207,
+        0.99546
+      ],
+      "FEDFUNDS": 3.04,
+      "SP500": 1202.219971,
+      "UNRATE": 5.0,
+      "CPI": 193.7,
+      "DGS10": 3.91,
+      "USREC": 0.0,
+      "SP500_return": 0.024980327644567035,
+      "bond_return": 0.05321666666666665,
+      "CPI_change": 0.0005165289256197081,
+      "yield_spread": 0.8700000000000001
+    },
+    {
+      "date": "2005-07-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.001058,
+        1.5e-05,
+        0.998927
+      ],
+      "FEDFUNDS": 3.26,
+      "SP500": 1194.439941,
+      "UNRATE": 5.0,
+      "CPI": 194.9,
+      "DGS10": 4.06,
+      "USREC": 0.0,
+      "SP500_return": -0.006471386424839132,
+      "bond_return": -0.010241666666666618,
+      "CPI_change": 0.006195147134744561,
+      "yield_spread": 0.7999999999999998
+    },
+    {
+      "date": "2005-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000414,
+        2e-05,
+        0.999566
+      ],
+      "FEDFUNDS": 3.5,
+      "SP500": 1235.349976,
+      "UNRATE": 4.9,
+      "CPI": 196.1,
+      "DGS10": 4.32,
+      "USREC": 0.0,
+      "SP500_return": 0.03425039099559046,
+      "bond_return": -0.020016666666666728,
+      "CPI_change": 0.0061570035915854415,
+      "yield_spread": 0.8200000000000003
+    },
+    {
+      "date": "2005-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        0.0,
+        0.999999
+      ],
+      "FEDFUNDS": 3.62,
+      "SP500": 1221.589966,
+      "UNRATE": 5.0,
+      "CPI": 198.8,
+      "DGS10": 4.02,
+      "USREC": 0.0,
+      "SP500_return": -0.011138552043813643,
+      "bond_return": 0.030600000000000065,
+      "CPI_change": 0.013768485466598701,
+      "yield_spread": 0.39999999999999947
+    },
+    {
+      "date": "2005-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.998841,
+        1e-06,
+        0.001158
+      ],
+      "FEDFUNDS": 3.78,
+      "SP500": 1221.589966,
+      "UNRATE": 5.0,
+      "CPI": 199.1,
+      "DGS10": 4.02,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033499999999999997,
+      "CPI_change": 0.0015090543259557165,
+      "yield_spread": 0.23999999999999977
+    },
+    {
+      "date": "2005-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999721,
+        0.0,
+        0.000279
+      ],
+      "FEDFUNDS": 4.0,
+      "SP500": 1202.76001,
+      "UNRATE": 5.0,
+      "CPI": 198.1,
+      "DGS10": 4.58,
+      "USREC": 0.0,
+      "SP500_return": -0.015414301462918223,
+      "bond_return": -0.04705000000000004,
+      "CPI_change": -0.0050226017076845375,
+      "yield_spread": 0.5800000000000001
+    },
+    {
+      "date": "2005-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999998,
+        0.0,
+        2e-06
+      ],
+      "FEDFUNDS": 4.16,
+      "SP500": 1264.670044,
+      "UNRATE": 4.9,
+      "CPI": 198.1,
+      "DGS10": 4.52,
+      "USREC": 0.0,
+      "SP500_return": 0.05147330596733091,
+      "bond_return": 0.009216666666666712,
+      "CPI_change": 0.0,
+      "yield_spread": 0.35999999999999943
+    },
+    {
+      "date": "2006-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999987,
+        0.0,
+        1.3e-05
+      ],
+      "FEDFUNDS": 4.29,
+      "SP500": 1264.670044,
+      "UNRATE": 4.7,
+      "CPI": 199.3,
+      "DGS10": 4.52,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0037666666666666664,
+      "CPI_change": 0.006057546693589266,
+      "yield_spread": 0.22999999999999954
+    },
+    {
+      "date": "2006-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.49,
+      "SP500": 1282.459961,
+      "UNRATE": 4.8,
+      "CPI": 199.4,
+      "DGS10": 4.57,
+      "USREC": 0.0,
+      "SP500_return": 0.014066844616428709,
+      "bond_return": -0.0007333333333333974,
+      "CPI_change": 0.0005017561465128217,
+      "yield_spread": 0.08000000000000007
+    },
+    {
+      "date": "2006-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.59,
+      "SP500": 1291.23999,
+      "UNRATE": 4.7,
+      "CPI": 199.7,
+      "DGS10": 4.59,
+      "USREC": 0.0,
+      "SP500_return": 0.00684624024687186,
+      "bond_return": 0.0020083333333333724,
+      "CPI_change": 0.0015045135406217547,
+      "yield_spread": 0.0
+    },
+    {
+      "date": "2006-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.79,
+      "SP500": 1291.23999,
+      "UNRATE": 4.7,
+      "CPI": 200.7,
+      "DGS10": 4.59,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003825,
+      "CPI_change": 0.005007511266900355,
+      "yield_spread": -0.20000000000000018
+    },
+    {
+      "date": "2006-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.94,
+      "SP500": 1305.189941,
+      "UNRATE": 4.6,
+      "CPI": 201.3,
+      "DGS10": 5.14,
+      "USREC": 0.0,
+      "SP500_return": 0.010803530798329852,
+      "bond_return": -0.04567499999999998,
+      "CPI_change": 0.002989536621823774,
+      "yield_spread": 0.1999999999999993
+    },
+    {
+      "date": "2006-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.99,
+      "SP500": 1285.709961,
+      "UNRATE": 4.6,
+      "CPI": 201.8,
+      "DGS10": 5.11,
+      "USREC": 0.0,
+      "SP500_return": -0.014925015423483123,
+      "bond_return": 0.0069833333333332755,
+      "CPI_change": 0.0024838549428713996,
+      "yield_spread": 0.1200000000000001
+    },
+    {
+      "date": "2006-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.24,
+      "SP500": 1285.709961,
+      "UNRATE": 4.7,
+      "CPI": 202.9,
+      "DGS10": 5.11,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004258333333333334,
+      "CPI_change": 0.005450941526263575,
+      "yield_spread": -0.1299999999999999
+    },
+    {
+      "date": "2006-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1270.920044,
+      "UNRATE": 4.7,
+      "CPI": 203.8,
+      "DGS10": 4.99,
+      "USREC": 0.0,
+      "SP500_return": -0.011503307471069757,
+      "bond_return": 0.015058333333333344,
+      "CPI_change": 0.004435682602267121,
+      "yield_spread": -0.2599999999999998
+    },
+    {
+      "date": "2006-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1311.01001,
+      "UNRATE": 4.5,
+      "CPI": 202.8,
+      "DGS10": 4.73,
+      "USREC": 0.0,
+      "SP500_return": 0.031544050461131956,
+      "bond_return": 0.027558333333333313,
+      "CPI_change": -0.004906771344455385,
+      "yield_spread": -0.5199999999999996
+    },
+    {
+      "date": "2006-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1311.01001,
+      "UNRATE": 4.4,
+      "CPI": 201.9,
+      "DGS10": 4.73,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003941666666666667,
+      "CPI_change": -0.004437869822485285,
+      "yield_spread": -0.5199999999999996
+    },
+    {
+      "date": "2006-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1367.810059,
+      "UNRATE": 4.5,
+      "CPI": 202.0,
+      "DGS10": 4.57,
+      "USREC": 0.0,
+      "SP500_return": 0.04332541213777619,
+      "bond_return": 0.01834166666666668,
+      "CPI_change": 0.0004952947003467045,
+      "yield_spread": -0.6799999999999997
+    },
+    {
+      "date": "2006-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.24,
+      "SP500": 1396.709961,
+      "UNRATE": 4.4,
+      "CPI": 203.1,
+      "DGS10": 4.43,
+      "USREC": 0.0,
+      "SP500_return": 0.021128592972279092,
+      "bond_return": 0.016408333333333386,
+      "CPI_change": 0.00544554455445545,
+      "yield_spread": -0.8100000000000005
+    },
+    {
+      "date": "2007-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1396.709961,
+      "UNRATE": 4.6,
+      "CPI": 203.437,
+      "DGS10": 4.43,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0036916666666666664,
+      "CPI_change": 0.001659281142294633,
+      "yield_spread": -0.8200000000000003
+    },
+    {
+      "date": "2007-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.26,
+      "SP500": 1445.939941,
+      "UNRATE": 4.5,
+      "CPI": 204.226,
+      "DGS10": 4.84,
+      "USREC": 0.0,
+      "SP500_return": 0.03524710310274659,
+      "bond_return": -0.03320833333333335,
+      "CPI_change": 0.003878350545869269,
+      "yield_spread": -0.41999999999999993
+    },
+    {
+      "date": "2007-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.26,
+      "SP500": 1403.170044,
+      "UNRATE": 4.4,
+      "CPI": 205.288,
+      "DGS10": 4.56,
+      "USREC": 0.0,
+      "SP500_return": -0.029579303944270885,
+      "bond_return": 0.029233333333333354,
+      "CPI_change": 0.005200121434097538,
+      "yield_spread": -0.7000000000000002
+    },
+    {
+      "date": "2007-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1403.170044,
+      "UNRATE": 4.5,
+      "CPI": 205.904,
+      "DGS10": 4.56,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0037999999999999996,
+      "CPI_change": 0.003000662483924943,
+      "yield_spread": -0.6900000000000004
+    },
+    {
+      "date": "2007-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1486.300049,
+      "UNRATE": 4.4,
+      "CPI": 206.755,
+      "DGS10": 4.64,
+      "USREC": 0.0,
+      "SP500_return": 0.05924442682871289,
+      "bond_return": -0.003400000000000007,
+      "CPI_change": 0.004132994016629032,
+      "yield_spread": -0.6100000000000003
+    },
+    {
+      "date": "2007-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.25,
+      "SP500": 1536.339966,
+      "UNRATE": 4.6,
+      "CPI": 207.234,
+      "DGS10": 4.95,
+      "USREC": 0.0,
+      "SP500_return": 0.03366743951442874,
+      "bond_return": -0.02403333333333338,
+      "CPI_change": 0.0023167517109623503,
+      "yield_spread": -0.2999999999999998
+    },
+    {
+      "date": "2007-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.26,
+      "SP500": 1536.339966,
+      "UNRATE": 4.7,
+      "CPI": 207.603,
+      "DGS10": 4.95,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.004125,
+      "CPI_change": 0.0017805958481715844,
+      "yield_spread": -0.3099999999999996
+    },
+    {
+      "date": "2007-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.02,
+      "SP500": 1465.810059,
+      "UNRATE": 4.6,
+      "CPI": 207.667,
+      "DGS10": 4.76,
+      "USREC": 0.0,
+      "SP500_return": -0.04590774734815439,
+      "bond_return": 0.021225000000000036,
+      "CPI_change": 0.00030828070885302594,
+      "yield_spread": -0.2599999999999998
+    },
+    {
+      "date": "2007-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.94,
+      "SP500": 1465.810059,
+      "UNRATE": 4.7,
+      "CPI": 208.547,
+      "DGS10": 4.76,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003966666666666666,
+      "CPI_change": 0.0042375533907650365,
+      "yield_spread": -0.1800000000000006
+    },
+    {
+      "date": "2007-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.76,
+      "SP500": 1547.040039,
+      "UNRATE": 4.7,
+      "CPI": 209.19,
+      "DGS10": 4.56,
+      "USREC": 0.0,
+      "SP500_return": 0.05541644328421147,
+      "bond_return": 0.021966666666666683,
+      "CPI_change": 0.0030832378312801723,
+      "yield_spread": -0.20000000000000018
+    },
+    {
+      "date": "2007-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999992,
+        0.0,
+        8e-06
+      ],
+      "FEDFUNDS": 4.49,
+      "SP500": 1508.439941,
+      "UNRATE": 4.7,
+      "CPI": 210.834,
+      "DGS10": 4.36,
+      "USREC": 0.0,
+      "SP500_return": -0.024950936644762445,
+      "bond_return": 0.021799999999999937,
+      "CPI_change": 0.007858884267890387,
+      "yield_spread": -0.1299999999999999
+    },
+    {
+      "date": "2007-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 4.24,
+      "SP500": 1508.439941,
+      "UNRATE": 5.0,
+      "CPI": 211.445,
+      "DGS10": 4.36,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0036333333333333335,
+      "CPI_change": 0.002898014551732553,
+      "yield_spread": 0.1200000000000001
+    },
+    {
+      "date": "2008-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.998888,
+        1.1e-05,
+        0.001101
+      ],
+      "FEDFUNDS": 3.94,
+      "SP500": 1508.439941,
+      "UNRATE": 5.0,
+      "CPI": 212.174,
+      "DGS10": 4.36,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0036333333333333335,
+      "CPI_change": 0.003447705076970342,
+      "yield_spread": 0.4200000000000004
+    },
+    {
+      "date": "2008-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.933667,
+        0.00014,
+        0.066193
+      ],
+      "FEDFUNDS": 2.98,
+      "SP500": 1395.420044,
+      "UNRATE": 4.9,
+      "CPI": 212.687,
+      "DGS10": 3.62,
+      "USREC": 1.0,
+      "SP500_return": -0.07492502281865798,
+      "bond_return": 0.07023333333333336,
+      "CPI_change": 0.0024178268779397882,
+      "yield_spread": 0.6400000000000001
+    },
+    {
+      "date": "2008-03-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.342062,
+        0.000733,
+        0.657205
+      ],
+      "FEDFUNDS": 2.61,
+      "SP500": 1395.420044,
+      "UNRATE": 5.1,
+      "CPI": 213.448,
+      "DGS10": 3.62,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0030166666666666666,
+      "CPI_change": 0.003578027806118822,
+      "yield_spread": 1.0100000000000002
+    },
+    {
+      "date": "2008-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.06484,
+        0.000319,
+        0.934841
+      ],
+      "FEDFUNDS": 2.28,
+      "SP500": 1370.180054,
+      "UNRATE": 5.0,
+      "CPI": 213.942,
+      "DGS10": 3.57,
+      "USREC": 1.0,
+      "SP500_return": -0.01808773645507422,
+      "bond_return": 0.007516666666666691,
+      "CPI_change": 0.002314381020201539,
+      "yield_spread": 1.29
+    },
+    {
+      "date": "2008-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        7e-05,
+        0.00016,
+        0.999771
+      ],
+      "FEDFUNDS": 1.98,
+      "SP500": 1409.339966,
+      "UNRATE": 5.4,
+      "CPI": 215.208,
+      "DGS10": 3.78,
+      "USREC": 1.0,
+      "SP500_return": 0.028580121193327646,
+      "bond_return": -0.015924999999999998,
+      "CPI_change": 0.0059174916566171465,
+      "yield_spread": 1.7999999999999998
+    },
+    {
+      "date": "2008-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        1e-06,
+        0.999999
+      ],
+      "FEDFUNDS": 2.0,
+      "SP500": 1409.339966,
+      "UNRATE": 5.6,
+      "CPI": 217.463,
+      "DGS10": 3.78,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.00315,
+      "CPI_change": 0.0104782350098509,
+      "yield_spread": 1.7799999999999998
+    },
+    {
+      "date": "2008-07-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        4e-06,
+        0.999996
+      ],
+      "FEDFUNDS": 2.01,
+      "SP500": 1284.910034,
+      "UNRATE": 5.8,
+      "CPI": 219.016,
+      "DGS10": 4.01,
+      "USREC": 1.0,
+      "SP500_return": -0.08828950785604839,
+      "bond_return": -0.01755,
+      "CPI_change": 0.007141444751521009,
+      "yield_spread": 2.0
+    },
+    {
+      "date": "2008-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.000216,
+        0.999784
+      ],
+      "FEDFUNDS": 2.0,
+      "SP500": 1260.310059,
+      "UNRATE": 6.1,
+      "CPI": 218.69,
+      "DGS10": 3.97,
+      "USREC": 1.0,
+      "SP500_return": -0.019145289825015177,
+      "bond_return": 0.006941666666666629,
+      "CPI_change": -0.0014884757278006422,
+      "yield_spread": 1.9700000000000002
+    },
+    {
+      "date": "2008-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.000752,
+        0.999248
+      ],
+      "FEDFUNDS": 1.81,
+      "SP500": 1260.310059,
+      "UNRATE": 6.1,
+      "CPI": 218.877,
+      "DGS10": 3.97,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033083333333333337,
+      "CPI_change": 0.0008550916822900323,
+      "yield_spread": 2.16
+    },
+    {
+      "date": "2008-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "FEDFUNDS": 0.97,
+      "SP500": 1161.060059,
+      "UNRATE": 6.5,
+      "CPI": 216.995,
+      "DGS10": 3.77,
+      "USREC": 1.0,
+      "SP500_return": -0.07875046246853767,
+      "bond_return": 0.02130833333333335,
+      "CPI_change": -0.008598436564828615,
+      "yield_spread": 2.8
+    },
+    {
+      "date": "2008-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "FEDFUNDS": 0.39,
+      "SP500": 1161.060059,
+      "UNRATE": 6.8,
+      "CPI": 213.153,
+      "DGS10": 3.77,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0031416666666666667,
+      "CPI_change": -0.017705477084725474,
+      "yield_spread": 3.38
+    },
+    {
+      "date": "2008-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.000327,
+        0.999673
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 816.210022,
+      "UNRATE": 7.3,
+      "CPI": 211.398,
+      "DGS10": 2.72,
+      "USREC": 1.0,
+      "SP500_return": -0.2970130910342511,
+      "bond_return": 0.09764166666666665,
+      "CPI_change": -0.008233522399403226,
+      "yield_spread": 2.56
+    },
+    {
+      "date": "2009-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999942,
+        5.8e-05
+      ],
+      "FEDFUNDS": 0.15,
+      "SP500": 816.210022,
+      "UNRATE": 7.8,
+      "CPI": 211.933,
+      "DGS10": 2.72,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002266666666666667,
+      "CPI_change": 0.0025307713412614508,
+      "yield_spread": 2.5700000000000003
+    },
+    {
+      "date": "2009-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.22,
+      "SP500": 816.210022,
+      "UNRATE": 8.3,
+      "CPI": 212.705,
+      "DGS10": 2.72,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002266666666666667,
+      "CPI_change": 0.003642660652187324,
+      "yield_spread": 2.5
+    },
+    {
+      "date": "2009-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.18,
+      "SP500": 816.210022,
+      "UNRATE": 8.7,
+      "CPI": 212.495,
+      "DGS10": 2.72,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002266666666666667,
+      "CPI_change": -0.000987282856538485,
+      "yield_spread": 2.54
+    },
+    {
+      "date": "2009-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.15,
+      "SP500": 811.0800171,
+      "UNRATE": 9.0,
+      "CPI": 212.709,
+      "DGS10": 2.68,
+      "USREC": 1.0,
+      "SP500_return": -0.006285153038711466,
+      "bond_return": 0.00586666666666667,
+      "CPI_change": 0.0010070825195886979,
+      "yield_spread": 2.5300000000000002
+    },
+    {
+      "date": "2009-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.18,
+      "SP500": 877.5200195,
+      "UNRATE": 9.4,
+      "CPI": 213.022,
+      "DGS10": 3.21,
+      "USREC": 1.0,
+      "SP500_return": 0.0819154719623778,
+      "bond_return": -0.04546666666666665,
+      "CPI_change": 0.0014714939189219844,
+      "yield_spread": 3.03
+    },
+    {
+      "date": "2009-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.21,
+      "SP500": 942.8699951,
+      "UNRATE": 9.5,
+      "CPI": 214.79,
+      "DGS10": 3.71,
+      "USREC": 1.0,
+      "SP500_return": 0.07447120766228865,
+      "bond_return": -0.042325,
+      "CPI_change": 0.008299612246622345,
+      "yield_spread": 3.5
+    },
+    {
+      "date": "2009-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 923.3300171,
+      "UNRATE": 9.5,
+      "CPI": 214.726,
+      "DGS10": 3.55,
+      "USREC": 0.0,
+      "SP500_return": -0.020723936599475357,
+      "bond_return": 0.01749166666666668,
+      "CPI_change": -0.00029796545463012247,
+      "yield_spread": 3.3899999999999997
+    },
+    {
+      "date": "2009-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 923.3300171,
+      "UNRATE": 9.6,
+      "CPI": 215.445,
+      "DGS10": 3.55,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002958333333333333,
+      "CPI_change": 0.0033484533777929926,
+      "yield_spread": 3.3899999999999997
+    },
+    {
+      "date": "2009-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.15,
+      "SP500": 998.039978,
+      "UNRATE": 9.8,
+      "CPI": 215.861,
+      "DGS10": 3.38,
+      "USREC": 0.0,
+      "SP500_return": 0.08091360566252304,
+      "bond_return": 0.018258333333333328,
+      "CPI_change": 0.0019308872334005134,
+      "yield_spread": 3.23
+    },
+    {
+      "date": "2009-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 1029.849976,
+      "UNRATE": 10.0,
+      "CPI": 216.509,
+      "DGS10": 3.21,
+      "USREC": 0.0,
+      "SP500_return": 0.03187246873992455,
+      "bond_return": 0.01811666666666666,
+      "CPI_change": 0.003001931798703783,
+      "yield_spread": 3.09
+    },
+    {
+      "date": "2009-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 1029.849976,
+      "UNRATE": 9.9,
+      "CPI": 217.234,
+      "DGS10": 3.21,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002675,
+      "CPI_change": 0.0033485905897676638,
+      "yield_spread": 3.09
+    },
+    {
+      "date": "2009-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 1108.859985,
+      "UNRATE": 9.9,
+      "CPI": 217.347,
+      "DGS10": 3.28,
+      "USREC": 0.0,
+      "SP500_return": 0.07671992119364779,
+      "bond_return": -0.0036249999999999854,
+      "CPI_change": 0.0005201763996427466,
+      "yield_spread": 3.1599999999999997
+    },
+    {
+      "date": "2010-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.11,
+      "SP500": 1108.859985,
+      "UNRATE": 9.8,
+      "CPI": 217.488,
+      "DGS10": 3.28,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0027333333333333333,
+      "CPI_change": 0.0006487322116246474,
+      "yield_spread": 3.17
+    },
+    {
+      "date": "2010-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.13,
+      "SP500": 1089.189941,
+      "UNRATE": 9.8,
+      "CPI": 217.281,
+      "DGS10": 3.68,
+      "USREC": 0.0,
+      "SP500_return": -0.017738979010952338,
+      "bond_return": -0.0332666666666667,
+      "CPI_change": -0.0009517766497462166,
+      "yield_spread": 3.5500000000000003
+    },
+    {
+      "date": "2010-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1115.709961,
+      "UNRATE": 9.9,
+      "CPI": 217.353,
+      "DGS10": 3.61,
+      "USREC": 0.0,
+      "SP500_return": 0.024348388652627007,
+      "bond_return": 0.009366666666666692,
+      "CPI_change": 0.00033136813619227823,
+      "yield_spread": 3.4499999999999997
+    },
+    {
+      "date": "2010-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.2,
+      "SP500": 1178.099976,
+      "UNRATE": 9.9,
+      "CPI": 217.403,
+      "DGS10": 3.89,
+      "USREC": 0.0,
+      "SP500_return": 0.05591956438578394,
+      "bond_return": -0.022191666666666686,
+      "CPI_change": 0.00023004053314190642,
+      "yield_spread": 3.69
+    },
+    {
+      "date": "2010-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.2,
+      "SP500": 1178.099976,
+      "UNRATE": 9.6,
+      "CPI": 217.29,
+      "DGS10": 3.89,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0032416666666666666,
+      "CPI_change": -0.0005197720362644098,
+      "yield_spread": 3.69
+    },
+    {
+      "date": "2010-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.18,
+      "SP500": 1070.709961,
+      "UNRATE": 9.4,
+      "CPI": 217.199,
+      "DGS10": 3.29,
+      "USREC": 0.0,
+      "SP500_return": -0.09115526456814049,
+      "bond_return": 0.05724166666666667,
+      "CPI_change": -0.00041879515854381655,
+      "yield_spread": 3.11
+    },
+    {
+      "date": "2010-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.18,
+      "SP500": 1027.369995,
+      "UNRATE": 9.4,
+      "CPI": 217.605,
+      "DGS10": 2.96,
+      "USREC": 0.0,
+      "SP500_return": -0.04047778350686326,
+      "bond_return": 0.032441666666666674,
+      "CPI_change": 0.0018692535416828804,
+      "yield_spread": 2.78
+    },
+    {
+      "date": "2010-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.19,
+      "SP500": 1027.369995,
+      "UNRATE": 9.5,
+      "CPI": 217.923,
+      "DGS10": 2.96,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0024666666666666665,
+      "CPI_change": 0.0014613634796996067,
+      "yield_spread": 2.77
+    },
+    {
+      "date": "2010-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.19,
+      "SP500": 1080.290039,
+      "UNRATE": 9.5,
+      "CPI": 218.275,
+      "DGS10": 2.58,
+      "USREC": 0.0,
+      "SP500_return": 0.05151020981491672,
+      "bond_return": 0.03666666666666665,
+      "CPI_change": 0.001615249422961318,
+      "yield_spread": 2.39
+    },
+    {
+      "date": "2010-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.19,
+      "SP500": 1146.23999,
+      "UNRATE": 9.4,
+      "CPI": 219.035,
+      "DGS10": 2.54,
+      "USREC": 0.0,
+      "SP500_return": 0.06104837462080881,
+      "bond_return": 0.005750000000000003,
+      "CPI_change": 0.00348184629481163,
+      "yield_spread": 2.35
+    },
+    {
+      "date": "2010-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.19,
+      "SP500": 1184.380005,
+      "UNRATE": 9.8,
+      "CPI": 219.59,
+      "DGS10": 2.66,
+      "USREC": 0.0,
+      "SP500_return": 0.033274022310109785,
+      "bond_return": -0.008683333333333342,
+      "CPI_change": 0.0025338416234848005,
+      "yield_spread": 2.47
+    },
+    {
+      "date": "2010-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.18,
+      "SP500": 1206.069946,
+      "UNRATE": 9.3,
+      "CPI": 220.472,
+      "DGS10": 2.97,
+      "USREC": 0.0,
+      "SP500_return": 0.018313329259556532,
+      "bond_return": -0.02568333333333334,
+      "CPI_change": 0.004016576346828282,
+      "yield_spread": 2.79
+    },
+    {
+      "date": "2011-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.17,
+      "SP500": 1206.069946,
+      "UNRATE": 9.1,
+      "CPI": 221.187,
+      "DGS10": 2.97,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002475,
+      "CPI_change": 0.003243042200370194,
+      "yield_spread": 2.8000000000000003
+    },
+    {
+      "date": "2011-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1307.589966,
+      "UNRATE": 9.0,
+      "CPI": 221.898,
+      "DGS10": 3.48,
+      "USREC": 0.0,
+      "SP500_return": 0.08417423909508481,
+      "bond_return": -0.043424999999999984,
+      "CPI_change": 0.00321447463006419,
+      "yield_spread": 3.32
+    },
+    {
+      "date": "2011-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 1306.329956,
+      "UNRATE": 9.0,
+      "CPI": 223.046,
+      "DGS10": 3.41,
+      "USREC": 0.0,
+      "SP500_return": -0.0009636124723826356,
+      "bond_return": 0.009199999999999986,
+      "CPI_change": 0.0051735482068338,
+      "yield_spread": 3.27
+    },
+    {
+      "date": "2011-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.1,
+      "SP500": 1332.410034,
+      "UNRATE": 9.1,
+      "CPI": 224.093,
+      "DGS10": 3.46,
+      "USREC": 0.0,
+      "SP500_return": 0.019964387925281546,
+      "bond_return": -0.0016583333333333172,
+      "CPI_change": 0.0046940989750992035,
+      "yield_spread": 3.36
+    },
+    {
+      "date": "2011-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1332.410034,
+      "UNRATE": 9.0,
+      "CPI": 224.806,
+      "DGS10": 3.46,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0028833333333333332,
+      "CPI_change": 0.003181714734507679,
+      "yield_spread": 3.37
+    },
+    {
+      "date": "2011-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1314.550049,
+      "UNRATE": 9.1,
+      "CPI": 224.806,
+      "DGS10": 2.96,
+      "USREC": 0.0,
+      "SP500_return": -0.013404270865765677,
+      "bond_return": 0.04788333333333333,
+      "CPI_change": 0.0,
+      "yield_spread": 2.87
+    },
+    {
+      "date": "2011-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 1339.670044,
+      "UNRATE": 9.0,
+      "CPI": 225.395,
+      "DGS10": 3.22,
+      "USREC": 0.0,
+      "SP500_return": 0.019109196351336566,
+      "bond_return": -0.020933333333333356,
+      "CPI_change": 0.0026200368317570444,
+      "yield_spread": 3.1500000000000004
+    },
+    {
+      "date": "2011-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.1,
+      "SP500": 1286.939941,
+      "UNRATE": 9.0,
+      "CPI": 226.106,
+      "DGS10": 2.77,
+      "USREC": 0.0,
+      "SP500_return": -0.03936051510307559,
+      "bond_return": 0.04318333333333335,
+      "CPI_change": 0.003154462166418792,
+      "yield_spread": 2.67
+    },
+    {
+      "date": "2011-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 1204.420044,
+      "UNRATE": 9.0,
+      "CPI": 226.597,
+      "DGS10": 2.15,
+      "USREC": 0.0,
+      "SP500_return": -0.06412101635129852,
+      "bond_return": 0.058108333333333345,
+      "CPI_change": 0.0021715478580843772,
+      "yield_spread": 2.07
+    },
+    {
+      "date": "2011-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 1204.420044,
+      "UNRATE": 8.8,
+      "CPI": 226.75,
+      "DGS10": 2.15,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0017916666666666667,
+      "CPI_change": 0.0006752075270193281,
+      "yield_spread": 2.08
+    },
+    {
+      "date": "2011-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 1218.280029,
+      "UNRATE": 8.6,
+      "CPI": 227.169,
+      "DGS10": 2.01,
+      "USREC": 0.0,
+      "SP500_return": 0.011507600748630553,
+      "bond_return": 0.014391666666666678,
+      "CPI_change": 0.0018478500551268873,
+      "yield_spread": 1.9299999999999997
+    },
+    {
+      "date": "2011-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 1244.579956,
+      "UNRATE": 8.5,
+      "CPI": 227.223,
+      "DGS10": 2.11,
+      "USREC": 0.0,
+      "SP500_return": 0.021587751891154028,
+      "bond_return": -0.007325000000000009,
+      "CPI_change": 0.00023770849015480877,
+      "yield_spread": 2.04
+    },
+    {
+      "date": "2012-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 1244.579956,
+      "UNRATE": 8.3,
+      "CPI": 227.842,
+      "DGS10": 2.11,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0017583333333333333,
+      "CPI_change": 0.0027241960540966836,
+      "yield_spread": 2.03
+    },
+    {
+      "date": "2012-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.1,
+      "SP500": 1324.089966,
+      "UNRATE": 8.3,
+      "CPI": 228.329,
+      "DGS10": 1.87,
+      "USREC": 0.0,
+      "SP500_return": 0.06388501567672678,
+      "bond_return": 0.023358333333333314,
+      "CPI_change": 0.002137446124946152,
+      "yield_spread": 1.77
+    },
+    {
+      "date": "2012-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.13,
+      "SP500": 1374.089966,
+      "UNRATE": 8.2,
+      "CPI": 228.807,
+      "DGS10": 2.03,
+      "USREC": 0.0,
+      "SP500_return": 0.037761784534208864,
+      "bond_return": -0.01284166666666664,
+      "CPI_change": 0.002093470387029228,
+      "yield_spread": 1.9
+    },
+    {
+      "date": "2012-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 1374.089966,
+      "UNRATE": 8.2,
+      "CPI": 229.187,
+      "DGS10": 2.03,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0016916666666666664,
+      "CPI_change": 0.0016607883500068255,
+      "yield_spread": 1.8899999999999997
+    },
+    {
+      "date": "2012-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1405.819946,
+      "UNRATE": 8.2,
+      "CPI": 228.713,
+      "DGS10": 1.98,
+      "USREC": 0.0,
+      "SP500_return": 0.02309163212388965,
+      "bond_return": 0.006191666666666651,
+      "CPI_change": -0.002068180132381081,
+      "yield_spread": 1.82
+    },
+    {
+      "date": "2012-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1278.040039,
+      "UNRATE": 8.2,
+      "CPI": 228.524,
+      "DGS10": 1.47,
+      "USREC": 0.0,
+      "SP500_return": -0.09089350834975285,
+      "bond_return": 0.047549999999999995,
+      "CPI_change": -0.0008263631713106845,
+      "yield_spread": 1.31
+    },
+    {
+      "date": "2012-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1278.040039,
+      "UNRATE": 8.2,
+      "CPI": 228.59,
+      "DGS10": 1.47,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.001225,
+      "CPI_change": 0.0002888099280600187,
+      "yield_spread": 1.31
+    },
+    {
+      "date": "2012-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.13,
+      "SP500": 1375.319946,
+      "UNRATE": 8.1,
+      "CPI": 229.918,
+      "DGS10": 1.56,
+      "USREC": 0.0,
+      "SP500_return": 0.07611647838209867,
+      "bond_return": -0.006875000000000006,
+      "CPI_change": 0.00580952797585188,
+      "yield_spread": 1.4300000000000002
+    },
+    {
+      "date": "2012-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 1375.319946,
+      "UNRATE": 7.8,
+      "CPI": 231.015,
+      "DGS10": 1.56,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0013,
+      "CPI_change": 0.004771266277542319,
+      "yield_spread": 1.42
+    },
+    {
+      "date": "2012-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1444.48999,
+      "UNRATE": 7.8,
+      "CPI": 231.638,
+      "DGS10": 1.64,
+      "USREC": 0.0,
+      "SP500_return": 0.050293783785493096,
+      "bond_return": -0.005899999999999987,
+      "CPI_change": 0.0026967945804385884,
+      "yield_spread": 1.48
+    },
+    {
+      "date": "2012-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1427.589966,
+      "UNRATE": 7.7,
+      "CPI": 231.249,
+      "DGS10": 1.75,
+      "USREC": 0.0,
+      "SP500_return": -0.011699647707492988,
+      "bond_return": -0.008533333333333342,
+      "CPI_change": -0.0016793444944266378,
+      "yield_spread": 1.59
+    },
+    {
+      "date": "2012-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.16,
+      "SP500": 1427.589966,
+      "UNRATE": 7.9,
+      "CPI": 231.221,
+      "DGS10": 1.75,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014583333333333334,
+      "CPI_change": -0.00012108160467716456,
+      "yield_spread": 1.59
+    },
+    {
+      "date": "2013-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 1427.589966,
+      "UNRATE": 8.0,
+      "CPI": 231.679,
+      "DGS10": 1.75,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014583333333333334,
+      "CPI_change": 0.001980788942180789,
+      "yield_spread": 1.6099999999999999
+    },
+    {
+      "date": "2013-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.15,
+      "SP500": 1513.170044,
+      "UNRATE": 7.7,
+      "CPI": 232.937,
+      "DGS10": 2.04,
+      "USREC": 0.0,
+      "SP500_return": 0.05994723978047345,
+      "bond_return": -0.02464166666666667,
+      "CPI_change": 0.005429926752100966,
+      "yield_spread": 1.8900000000000001
+    },
+    {
+      "date": "2013-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.99999,
+        1e-05
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 1518.199951,
+      "UNRATE": 7.5,
+      "CPI": 232.282,
+      "DGS10": 1.86,
+      "USREC": 0.0,
+      "SP500_return": 0.0033240857628291653,
+      "bond_return": 0.017899999999999996,
+      "CPI_change": -0.0028119191025899326,
+      "yield_spread": 1.7200000000000002
+    },
+    {
+      "date": "2013-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999998,
+        2e-06
+      ],
+      "FEDFUNDS": 0.15,
+      "SP500": 1562.170044,
+      "UNRATE": 7.6,
+      "CPI": 231.797,
+      "DGS10": 1.86,
+      "USREC": 0.0,
+      "SP500_return": 0.02896199079115891,
+      "bond_return": 0.0015500000000000002,
+      "CPI_change": -0.002087979266581219,
+      "yield_spread": 1.7100000000000002
+    },
+    {
+      "date": "2013-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.11,
+      "SP500": 1582.699951,
+      "UNRATE": 7.5,
+      "CPI": 231.893,
+      "DGS10": 1.66,
+      "USREC": 0.0,
+      "SP500_return": 0.013141915682515881,
+      "bond_return": 0.019550000000000015,
+      "CPI_change": 0.00041415548950163306,
+      "yield_spread": 1.5499999999999998
+    },
+    {
+      "date": "2013-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1582.699951,
+      "UNRATE": 7.5,
+      "CPI": 232.445,
+      "DGS10": 1.66,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0013833333333333332,
+      "CPI_change": 0.002380408205508555,
+      "yield_spread": 1.5699999999999998
+    },
+    {
+      "date": "2013-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999998,
+        2e-06
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1614.959961,
+      "UNRATE": 7.3,
+      "CPI": 232.9,
+      "DGS10": 2.5,
+      "USREC": 0.0,
+      "SP500_return": 0.02038289694747064,
+      "bond_return": -0.07421666666666667,
+      "CPI_change": 0.001957452300544338,
+      "yield_spread": 2.41
+    },
+    {
+      "date": "2013-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999999,
+        1e-06
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 1706.869995,
+      "UNRATE": 7.2,
+      "CPI": 233.456,
+      "DGS10": 2.74,
+      "USREC": 0.0,
+      "SP500_return": 0.05691164872167387,
+      "bond_return": -0.019516666666666686,
+      "CPI_change": 0.0023872906826962748,
+      "yield_spread": 2.66
+    },
+    {
+      "date": "2013-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999988,
+        1.2e-05
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 1706.869995,
+      "UNRATE": 7.2,
+      "CPI": 233.544,
+      "DGS10": 2.74,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0022833333333333334,
+      "CPI_change": 0.00037694469193350066,
+      "yield_spread": 2.66
+    },
+    {
+      "date": "2013-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999987,
+        1.3e-05
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1695.0,
+      "UNRATE": 7.2,
+      "CPI": 233.669,
+      "DGS10": 2.66,
+      "USREC": 0.0,
+      "SP500_return": -0.006954246682390086,
+      "bond_return": 0.00948333333333334,
+      "CPI_change": 0.000535231048539142,
+      "yield_spread": 2.5700000000000003
+    },
+    {
+      "date": "2013-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999985,
+        1.5e-05
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 1761.640015,
+      "UNRATE": 6.9,
+      "CPI": 234.1,
+      "DGS10": 2.65,
+      "USREC": 0.0,
+      "SP500_return": 0.03931564306784652,
+      "bond_return": 0.0031166666666666877,
+      "CPI_change": 0.0018444894273523804,
+      "yield_spread": 2.57
+    },
+    {
+      "date": "2013-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999953,
+        4.7e-05
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1761.640015,
+      "UNRATE": 6.7,
+      "CPI": 234.719,
+      "DGS10": 2.65,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0022083333333333334,
+      "CPI_change": 0.0026441691584793148,
+      "yield_spread": 2.56
+    },
+    {
+      "date": "2014-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999912,
+        8.8e-05
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 1761.640015,
+      "UNRATE": 6.6,
+      "CPI": 235.288,
+      "DGS10": 2.65,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0022083333333333334,
+      "CPI_change": 0.0024241752904536895,
+      "yield_spread": 2.58
+    },
+    {
+      "date": "2014-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999684,
+        0.000316
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 1761.640015,
+      "UNRATE": 6.7,
+      "CPI": 235.547,
+      "DGS10": 2.65,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0022083333333333334,
+      "CPI_change": 0.0011007786202441583,
+      "yield_spread": 2.58
+    },
+    {
+      "date": "2014-03-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 0.08,
+      "SP500": null,
+      "UNRATE": 6.7,
+      "CPI": 236.028,
+      "DGS10": null,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": null,
+      "CPI_change": 0.00204205530106516,
+      "yield_spread": null
+    },
+    {
+      "date": "2014-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.997024,
+        0.002976
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1885.52002,
+      "UNRATE": 6.2,
+      "CPI": 236.468,
+      "DGS10": 2.77,
+      "USREC": 0.0,
+      "SP500_return": 0.0703208396410091,
+      "bond_return": null,
+      "CPI_change": 0.0018641856050976013,
+      "yield_spread": 2.68
+    },
+    {
+      "date": "2014-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.973571,
+        0.026429
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1883.680054,
+      "UNRATE": 6.3,
+      "CPI": 236.918,
+      "DGS10": 2.63,
+      "USREC": 0.0,
+      "SP500_return": -0.000975840076203438,
+      "bond_return": 0.014908333333333343,
+      "CPI_change": 0.0019030059035471947,
+      "yield_spread": 2.54
+    },
+    {
+      "date": "2014-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.876309,
+        0.123691
+      ],
+      "FEDFUNDS": 0.1,
+      "SP500": 1883.680054,
+      "UNRATE": 6.1,
+      "CPI": 237.231,
+      "DGS10": 2.63,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0021916666666666664,
+      "CPI_change": 0.001321132206079767,
+      "yield_spread": 2.53
+    },
+    {
+      "date": "2014-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.703644,
+        0.296356
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1973.319946,
+      "UNRATE": 6.2,
+      "CPI": 237.498,
+      "DGS10": 2.58,
+      "USREC": 0.0,
+      "SP500_return": 0.04758764197223919,
+      "bond_return": 0.0066916666666666505,
+      "CPI_change": 0.001125485286492811,
+      "yield_spread": 2.49
+    },
+    {
+      "date": "2014-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.284404,
+        0.715596
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1925.150024,
+      "UNRATE": 6.1,
+      "CPI": 237.46,
+      "DGS10": 2.52,
+      "USREC": 0.0,
+      "SP500_return": -0.024410599050418758,
+      "bond_return": 0.007550000000000005,
+      "CPI_change": -0.00016000134737970129,
+      "yield_spread": 2.43
+    },
+    {
+      "date": "2014-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.091227,
+        0.908773
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1925.150024,
+      "UNRATE": 5.9,
+      "CPI": 237.477,
+      "DGS10": 2.52,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0021,
+      "CPI_change": 7.159100480080838e-05,
+      "yield_spread": 2.43
+    },
+    {
+      "date": "2014-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.014623,
+        0.985377
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1946.160034,
+      "UNRATE": 5.7,
+      "CPI": 237.43,
+      "DGS10": 2.42,
+      "USREC": 0.0,
+      "SP500_return": 0.010913440375075911,
+      "bond_return": 0.011100000000000007,
+      "CPI_change": -0.00019791390324119806,
+      "yield_spread": 2.33
+    },
+    {
+      "date": "2014-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.000756,
+        0.999244
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 1946.160034,
+      "UNRATE": 5.8,
+      "CPI": 236.983,
+      "DGS10": 2.42,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0020166666666666666,
+      "CPI_change": -0.0018826601524659647,
+      "yield_spread": 2.33
+    },
+    {
+      "date": "2014-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        7e-06,
+        0.999993
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 2053.439941,
+      "UNRATE": 5.6,
+      "CPI": 236.252,
+      "DGS10": 2.22,
+      "USREC": 0.0,
+      "SP500_return": 0.0551238876175586,
+      "bond_return": 0.02001666666666664,
+      "CPI_change": -0.0030846094445592387,
+      "yield_spread": 2.1
+    },
+    {
+      "date": "2015-01-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "FEDFUNDS": 0.11,
+      "SP500": 2053.439941,
+      "UNRATE": 5.7,
+      "CPI": 234.747,
+      "DGS10": 2.22,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.00185,
+      "CPI_change": -0.0063703164417655556,
+      "yield_spread": 2.1100000000000003
+    },
+    {
+      "date": "2015-02-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        0.000312,
+        0.999687
+      ],
+      "FEDFUNDS": 0.11,
+      "SP500": 2053.439941,
+      "UNRATE": 5.5,
+      "CPI": 235.342,
+      "DGS10": 2.22,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.00185,
+      "CPI_change": 0.0025346436802173855,
+      "yield_spread": 2.1100000000000003
+    },
+    {
+      "date": "2015-03-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2e-06,
+        0.000309,
+        0.999689
+      ],
+      "FEDFUNDS": 0.11,
+      "SP500": 2053.439941,
+      "UNRATE": 5.4,
+      "CPI": 235.976,
+      "DGS10": 2.22,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.00185,
+      "CPI_change": 0.0026939517808124425,
+      "yield_spread": 2.1100000000000003
+    },
+    {
+      "date": "2015-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        5e-06,
+        0.000165,
+        0.999831
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 2059.689941,
+      "UNRATE": 5.4,
+      "CPI": 236.222,
+      "DGS10": 1.87,
+      "USREC": 0.0,
+      "SP500_return": 0.003043673143396708,
+      "bond_return": 0.033350000000000005,
+      "CPI_change": 0.0010424788961589382,
+      "yield_spread": 1.75
+    },
+    {
+      "date": "2015-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        0.00042,
+        0.999579
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 2108.290039,
+      "UNRATE": 5.6,
+      "CPI": 237.001,
+      "DGS10": 2.12,
+      "USREC": 0.0,
+      "SP500_return": 0.02359583208742766,
+      "bond_return": -0.020941666666666664,
+      "CPI_change": 0.003297745341246827,
+      "yield_spread": 2.0
+    },
+    {
+      "date": "2015-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        3e-06,
+        0.000299,
+        0.999698
+      ],
+      "FEDFUNDS": 0.13,
+      "SP500": 2111.72998,
+      "UNRATE": 5.3,
+      "CPI": 237.657,
+      "DGS10": 2.19,
+      "USREC": 0.0,
+      "SP500_return": 0.001631626074385828,
+      "bond_return": -0.004533333333333318,
+      "CPI_change": 0.0027679208104607333,
+      "yield_spread": 2.06
+    },
+    {
+      "date": "2015-07-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        4e-06,
+        0.000376,
+        0.99962
+      ],
+      "FEDFUNDS": 0.13,
+      "SP500": 2077.419922,
+      "UNRATE": 5.2,
+      "CPI": 238.034,
+      "DGS10": 2.43,
+      "USREC": 0.0,
+      "SP500_return": -0.016247369846025483,
+      "bond_return": -0.019775000000000018,
+      "CPI_change": 0.0015863197801873063,
+      "yield_spread": 2.3000000000000003
+    },
+    {
+      "date": "2015-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        6e-06,
+        0.000189,
+        0.999805
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 2077.419922,
+      "UNRATE": 5.1,
+      "CPI": 238.033,
+      "DGS10": 2.43,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0020250000000000003,
+      "CPI_change": -4.20108051790713e-06,
+      "yield_spread": 2.29
+    },
+    {
+      "date": "2015-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2e-06,
+        3.1e-05,
+        0.999967
+      ],
+      "FEDFUNDS": 0.14,
+      "SP500": 1913.849976,
+      "UNRATE": 5.0,
+      "CPI": 237.498,
+      "DGS10": 2.17,
+      "USREC": 0.0,
+      "SP500_return": -0.07873706431125682,
+      "bond_return": 0.02542500000000002,
+      "CPI_change": -0.002247587519377592,
+      "yield_spread": 2.03
+    },
+    {
+      "date": "2015-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2.1e-05,
+        9.2e-05,
+        0.999887
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 1923.819946,
+      "UNRATE": 5.0,
+      "CPI": 237.733,
+      "DGS10": 2.05,
+      "USREC": 0.0,
+      "SP500_return": 0.00520937906577057,
+      "bond_return": 0.012608333333333343,
+      "CPI_change": 0.0009894820166906904,
+      "yield_spread": 1.9299999999999997
+    },
+    {
+      "date": "2015-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1.3e-05,
+        9.8e-05,
+        0.999889
+      ],
+      "FEDFUNDS": 0.12,
+      "SP500": 1923.819946,
+      "UNRATE": 5.1,
+      "CPI": 238.017,
+      "DGS10": 2.05,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0017083333333333332,
+      "CPI_change": 0.0011946174910508756,
+      "yield_spread": 1.9299999999999997
+    },
+    {
+      "date": "2015-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        9e-06,
+        1e-05,
+        0.99998
+      ],
+      "FEDFUNDS": 0.24,
+      "SP500": 2102.629883,
+      "UNRATE": 5.0,
+      "CPI": 237.761,
+      "DGS10": 2.15,
+      "USREC": 0.0,
+      "SP500_return": 0.09294525580306057,
+      "bond_return": -0.007291666666666675,
+      "CPI_change": -0.0010755534268560574,
+      "yield_spread": 1.91
+    },
+    {
+      "date": "2016-01-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        5.1e-05,
+        4.2e-05,
+        0.999907
+      ],
+      "FEDFUNDS": 0.34,
+      "SP500": 2102.629883,
+      "UNRATE": 4.8,
+      "CPI": 237.652,
+      "DGS10": 2.15,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0017916666666666667,
+      "CPI_change": -0.0004584435630738959,
+      "yield_spread": 1.8099999999999998
+    },
+    {
+      "date": "2016-02-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2.4e-05,
+        3.5e-05,
+        0.999941
+      ],
+      "FEDFUNDS": 0.38,
+      "SP500": 1939.380005,
+      "UNRATE": 4.9,
+      "CPI": 237.336,
+      "DGS10": 1.97,
+      "USREC": 0.0,
+      "SP500_return": -0.07764080560249509,
+      "bond_return": 0.017991666666666663,
+      "CPI_change": -0.0013296753235823022,
+      "yield_spread": 1.5899999999999999
+    },
+    {
+      "date": "2016-03-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        6.2e-05,
+        6.4e-05,
+        0.999873
+      ],
+      "FEDFUNDS": 0.36,
+      "SP500": 1978.349976,
+      "UNRATE": 5.0,
+      "CPI": 238.08,
+      "DGS10": 1.83,
+      "USREC": 0.0,
+      "SP500_return": 0.02009403567095136,
+      "bond_return": 0.014241666666666658,
+      "CPI_change": 0.0031347962382444194,
+      "yield_spread": 1.4700000000000002
+    },
+    {
+      "date": "2016-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        6.5e-05,
+        7.8e-05,
+        0.999858
+      ],
+      "FEDFUNDS": 0.37,
+      "SP500": 2072.78,
+      "UNRATE": 5.1,
+      "CPI": 238.992,
+      "DGS10": 1.79,
+      "USREC": 0.0,
+      "SP500_return": 0.04773170831529372,
+      "bond_return": 0.005125000000000004,
+      "CPI_change": 0.0038306451612901693,
+      "yield_spread": 1.42
+    },
+    {
+      "date": "2016-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000473,
+        5.5e-05,
+        0.999472
+      ],
+      "FEDFUNDS": 0.37,
+      "SP500": 2072.78,
+      "UNRATE": 4.8,
+      "CPI": 239.557,
+      "DGS10": 1.79,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014916666666666667,
+      "CPI_change": 0.0023640958693178504,
+      "yield_spread": 1.42
+    },
+    {
+      "date": "2016-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.001198,
+        6e-05,
+        0.998743
+      ],
+      "FEDFUNDS": 0.38,
+      "SP500": 2099.33,
+      "UNRATE": 4.9,
+      "CPI": 240.222,
+      "DGS10": 1.85,
+      "USREC": 0.0,
+      "SP500_return": 0.01280888468626662,
+      "bond_return": -0.003908333333333338,
+      "CPI_change": 0.002775957287827202,
+      "yield_spread": 1.4700000000000002
+    },
+    {
+      "date": "2016-07-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0062,
+        8e-05,
+        0.99372
+      ],
+      "FEDFUNDS": 0.39,
+      "SP500": 2102.95,
+      "UNRATE": 4.8,
+      "CPI": 240.101,
+      "DGS10": 1.46,
+      "USREC": 0.0,
+      "SP500_return": 0.0017243596766587377,
+      "bond_return": 0.03664166666666668,
+      "CPI_change": -0.0005037007434789409,
+      "yield_spread": 1.0699999999999998
+    },
+    {
+      "date": "2016-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.005842,
+        9.6e-05,
+        0.994063
+      ],
+      "FEDFUNDS": 0.4,
+      "SP500": 2170.84,
+      "UNRATE": 4.9,
+      "CPI": 240.545,
+      "DGS10": 1.51,
+      "USREC": 0.0,
+      "SP500_return": 0.03228322118928184,
+      "bond_return": -0.0032833333333333373,
+      "CPI_change": 0.0018492217858316895,
+      "yield_spread": 1.1099999999999999
+    },
+    {
+      "date": "2016-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.003421,
+        8.3e-05,
+        0.996496
+      ],
+      "FEDFUNDS": 0.4,
+      "SP500": 2170.86,
+      "UNRATE": 5.0,
+      "CPI": 241.176,
+      "DGS10": 1.57,
+      "USREC": 0.0,
+      "SP500_return": 9.213023530074693e-06,
+      "bond_return": -0.004141666666666671,
+      "CPI_change": 0.0026232097944252075,
+      "yield_spread": 1.17
+    },
+    {
+      "date": "2016-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.00249,
+        7.4e-05,
+        0.997436
+      ],
+      "FEDFUNDS": 0.4,
+      "SP500": 2170.86,
+      "UNRATE": 4.9,
+      "CPI": 241.741,
+      "DGS10": 1.57,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0013083333333333334,
+      "CPI_change": 0.0023426874979268764,
+      "yield_spread": 1.17
+    },
+    {
+      "date": "2016-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.001304,
+        5.9e-05,
+        0.998638
+      ],
+      "FEDFUNDS": 0.41,
+      "SP500": 2111.72,
+      "UNRATE": 4.7,
+      "CPI": 242.026,
+      "DGS10": 1.83,
+      "USREC": 0.0,
+      "SP500_return": -0.027242659591129925,
+      "bond_return": -0.022091666666666662,
+      "CPI_change": 0.0011789477167711837,
+      "yield_spread": 1.4200000000000002
+    },
+    {
+      "date": "2016-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000502,
+        0.000124,
+        0.999374
+      ],
+      "FEDFUNDS": 0.54,
+      "SP500": 2191.08,
+      "UNRATE": 4.7,
+      "CPI": 242.637,
+      "DGS10": 2.45,
+      "USREC": 0.0,
+      "SP500_return": 0.03758073987081634,
+      "bond_return": -0.05427500000000001,
+      "CPI_change": 0.002524522158776188,
+      "yield_spread": 1.9100000000000001
+    },
+    {
+      "date": "2017-01-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.001553,
+        6.3e-05,
+        0.998384
+      ],
+      "FEDFUNDS": 0.65,
+      "SP500": 2191.08,
+      "UNRATE": 4.7,
+      "CPI": 243.618,
+      "DGS10": 2.45,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002041666666666667,
+      "CPI_change": 0.004043076694815628,
+      "yield_spread": 1.8000000000000003
+    },
+    {
+      "date": "2017-02-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.021041,
+        7.3e-05,
+        0.978886
+      ],
+      "FEDFUNDS": 0.66,
+      "SP500": 2279.55,
+      "UNRATE": 4.6,
+      "CPI": 244.006,
+      "DGS10": 2.48,
+      "USREC": 0.0,
+      "SP500_return": 0.04037734815707328,
+      "bond_return": -0.0006583333333333155,
+      "CPI_change": 0.0015926573570097524,
+      "yield_spread": 1.8199999999999998
+    },
+    {
+      "date": "2017-03-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.11977,
+        1.8e-05,
+        0.880211
+      ],
+      "FEDFUNDS": 0.79,
+      "SP500": 2395.96,
+      "UNRATE": 4.4,
+      "CPI": 243.892,
+      "DGS10": 2.46,
+      "USREC": 0.0,
+      "SP500_return": 0.05106709657607844,
+      "bond_return": 0.0038666666666666684,
+      "CPI_change": -0.00046720162618951733,
+      "yield_spread": 1.67
+    },
+    {
+      "date": "2017-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.364043,
+        2e-05,
+        0.635937
+      ],
+      "FEDFUNDS": 0.9,
+      "SP500": 2395.96,
+      "UNRATE": 4.4,
+      "CPI": 244.193,
+      "DGS10": 2.46,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.00205,
+      "CPI_change": 0.001234152821740775,
+      "yield_spread": 1.56
+    },
+    {
+      "date": "2017-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.681387,
+        3e-06,
+        0.31861
+      ],
+      "FEDFUNDS": 0.91,
+      "SP500": 2388.33,
+      "UNRATE": 4.4,
+      "CPI": 244.004,
+      "DGS10": 2.33,
+      "USREC": 0.0,
+      "SP500_return": -0.00318452728760088,
+      "bond_return": 0.01374999999999999,
+      "CPI_change": -0.0007739779600562935,
+      "yield_spread": 1.42
+    },
+    {
+      "date": "2017-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.94056,
+        1e-06,
+        0.059439
+      ],
+      "FEDFUNDS": 1.04,
+      "SP500": 2430.06,
+      "UNRATE": 4.3,
+      "CPI": 244.163,
+      "DGS10": 2.21,
+      "USREC": 0.0,
+      "SP500_return": 0.01747245983595236,
+      "bond_return": 0.012741666666666675,
+      "CPI_change": 0.0006516286618252209,
+      "yield_spread": 1.17
+    },
+    {
+      "date": "2017-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.989122,
+        1e-06,
+        0.010877
+      ],
+      "FEDFUNDS": 1.15,
+      "SP500": 2430.06,
+      "UNRATE": 4.3,
+      "CPI": 244.243,
+      "DGS10": 2.21,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0018416666666666666,
+      "CPI_change": 0.0003276499715354486,
+      "yield_spread": 1.06
+    },
+    {
+      "date": "2017-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.993097,
+        0.0,
+        0.006903
+      ],
+      "FEDFUNDS": 1.16,
+      "SP500": 2476.35,
+      "UNRATE": 4.4,
+      "CPI": 245.183,
+      "DGS10": 2.26,
+      "USREC": 0.0,
+      "SP500_return": 0.01904891237253392,
+      "bond_return": -0.0026583333333333172,
+      "CPI_change": 0.0038486261632881824,
+      "yield_spread": 1.0999999999999999
+    },
+    {
+      "date": "2017-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.995701,
+        0.0,
+        0.004299
+      ],
+      "FEDFUNDS": 1.15,
+      "SP500": 2476.55,
+      "UNRATE": 4.3,
+      "CPI": 246.435,
+      "DGS10": 2.16,
+      "USREC": 0.0,
+      "SP500_return": 8.07640277020738e-05,
+      "bond_return": 0.0108833333333333,
+      "CPI_change": 0.005106389920997767,
+      "yield_spread": 1.0100000000000002
+    },
+    {
+      "date": "2017-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999568,
+        0.0,
+        0.000432
+      ],
+      "FEDFUNDS": 1.15,
+      "SP500": 2476.55,
+      "UNRATE": 4.2,
+      "CPI": 246.626,
+      "DGS10": 2.16,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0018000000000000002,
+      "CPI_change": 0.0007750522450138408,
+      "yield_spread": 1.0100000000000002
+    },
+    {
+      "date": "2017-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.99957,
+        0.0,
+        0.00043
+      ],
+      "FEDFUNDS": 1.16,
+      "SP500": 2579.36,
+      "UNRATE": 4.2,
+      "CPI": 247.284,
+      "DGS10": 2.37,
+      "USREC": 0.0,
+      "SP500_return": 0.041513395651208373,
+      "bond_return": -0.017099999999999997,
+      "CPI_change": 0.002668007428251684,
+      "yield_spread": 1.2100000000000002
+    },
+    {
+      "date": "2017-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999809,
+        0.0,
+        0.000191
+      ],
+      "FEDFUNDS": 1.3,
+      "SP500": 2642.22,
+      "UNRATE": 4.1,
+      "CPI": 247.805,
+      "DGS10": 2.37,
+      "USREC": 0.0,
+      "SP500_return": 0.024370386452453152,
+      "bond_return": 0.001975,
+      "CPI_change": 0.0021068892447551058,
+      "yield_spread": 1.07
+    },
+    {
+      "date": "2018-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999597,
+        0.0,
+        0.000403
+      ],
+      "FEDFUNDS": 1.41,
+      "SP500": 2642.22,
+      "UNRATE": 4.0,
+      "CPI": 248.859,
+      "DGS10": 2.37,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.001975,
+      "CPI_change": 0.004253344363511546,
+      "yield_spread": 0.9600000000000002
+    },
+    {
+      "date": "2018-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999085,
+        0.0,
+        0.000915
+      ],
+      "FEDFUNDS": 1.42,
+      "SP500": 2821.98,
+      "UNRATE": 4.1,
+      "CPI": 249.529,
+      "DGS10": 2.78,
+      "USREC": 0.0,
+      "SP500_return": 0.06803369893498656,
+      "bond_return": -0.03492499999999998,
+      "CPI_change": 0.0026922876006090224,
+      "yield_spread": 1.3599999999999999
+    },
+    {
+      "date": "2018-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999639,
+        0.0,
+        0.000361
+      ],
+      "FEDFUNDS": 1.51,
+      "SP500": 2677.67,
+      "UNRATE": 4.0,
+      "CPI": 249.577,
+      "DGS10": 2.81,
+      "USREC": 0.0,
+      "SP500_return": -0.05113785356380984,
+      "bond_return": -0.00038333333333335573,
+      "CPI_change": 0.000192362410782021,
+      "yield_spread": 1.3
+    },
+    {
+      "date": "2018-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999806,
+        0.0,
+        0.000194
+      ],
+      "FEDFUNDS": 1.69,
+      "SP500": 2677.67,
+      "UNRATE": 4.0,
+      "CPI": 250.227,
+      "DGS10": 2.81,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002341666666666667,
+      "CPI_change": 0.002604406656061986,
+      "yield_spread": 1.12
+    },
+    {
+      "date": "2018-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999807,
+        0.0,
+        0.000193
+      ],
+      "FEDFUNDS": 1.7,
+      "SP500": 2654.8,
+      "UNRATE": 3.8,
+      "CPI": 250.792,
+      "DGS10": 2.97,
+      "USREC": 0.0,
+      "SP500_return": -0.00854100766711352,
+      "bond_return": -0.012058333333333346,
+      "CPI_change": 0.002257949781598212,
+      "yield_spread": 1.2700000000000002
+    },
+    {
+      "date": "2018-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999935,
+        0.0,
+        6.5e-05
+      ],
+      "FEDFUNDS": 1.82,
+      "SP500": 2734.62,
+      "UNRATE": 4.0,
+      "CPI": 251.018,
+      "DGS10": 2.89,
+      "USREC": 0.0,
+      "SP500_return": 0.030066295012806776,
+      "bond_return": 0.009675000000000007,
+      "CPI_change": 0.0009011451720948305,
+      "yield_spread": 1.07
+    },
+    {
+      "date": "2018-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999974,
+        0.0,
+        2.6e-05
+      ],
+      "FEDFUNDS": 1.91,
+      "SP500": 2734.62,
+      "UNRATE": 3.8,
+      "CPI": 251.214,
+      "DGS10": 2.89,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0024083333333333335,
+      "CPI_change": 0.0007808204989283585,
+      "yield_spread": 0.9800000000000002
+    },
+    {
+      "date": "2018-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999929,
+        0.0,
+        7.1e-05
+      ],
+      "FEDFUNDS": 1.91,
+      "SP500": 2813.36,
+      "UNRATE": 3.8,
+      "CPI": 251.663,
+      "DGS10": 3.0,
+      "USREC": 0.0,
+      "SP500_return": 0.02879376293598379,
+      "bond_return": -0.007491666666666655,
+      "CPI_change": 0.0017873207703393845,
+      "yield_spread": 1.09
+    },
+    {
+      "date": "2018-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999944,
+        0.0,
+        5.6e-05
+      ],
+      "FEDFUNDS": 1.95,
+      "SP500": 2813.36,
+      "UNRATE": 3.7,
+      "CPI": 252.182,
+      "DGS10": 3.0,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0025,
+      "CPI_change": 0.002062281702117419,
+      "yield_spread": 1.05
+    },
+    {
+      "date": "2018-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999963,
+        0.0,
+        3.7e-05
+      ],
+      "FEDFUNDS": 2.19,
+      "SP500": 2924.59,
+      "UNRATE": 3.8,
+      "CPI": 252.772,
+      "DGS10": 3.09,
+      "USREC": 0.0,
+      "SP500_return": 0.03953635510563891,
+      "bond_return": -0.005599999999999987,
+      "CPI_change": 0.002339580144498754,
+      "yield_spread": 0.8999999999999999
+    },
+    {
+      "date": "2018-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999983,
+        0.0,
+        1.7e-05
+      ],
+      "FEDFUNDS": 2.2,
+      "SP500": 2740.37,
+      "UNRATE": 3.8,
+      "CPI": 252.594,
+      "DGS10": 3.14,
+      "USREC": 0.0,
+      "SP500_return": -0.06299002595235581,
+      "bond_return": -0.001925000000000024,
+      "CPI_change": -0.0007041919199911595,
+      "yield_spread": 0.94
+    },
+    {
+      "date": "2018-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999989,
+        0.0,
+        1.1e-05
+      ],
+      "FEDFUNDS": 2.27,
+      "SP500": 2740.37,
+      "UNRATE": 3.9,
+      "CPI": 252.767,
+      "DGS10": 3.14,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002616666666666667,
+      "CPI_change": 0.0006848935445813442,
+      "yield_spread": 0.8700000000000001
+    },
+    {
+      "date": "2019-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999996,
+        0.0,
+        4e-06
+      ],
+      "FEDFUNDS": 2.4,
+      "SP500": 2740.37,
+      "UNRATE": 4.0,
+      "CPI": 252.561,
+      "DGS10": 3.14,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.002616666666666667,
+      "CPI_change": -0.0008149798035343991,
+      "yield_spread": 0.7400000000000002
+    },
+    {
+      "date": "2019-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 2.4,
+      "SP500": 2706.53,
+      "UNRATE": 3.8,
+      "CPI": 253.319,
+      "DGS10": 2.7,
+      "USREC": 0.0,
+      "SP500_return": -0.012348697438666956,
+      "bond_return": 0.042216666666666666,
+      "CPI_change": 0.003001255142321968,
+      "yield_spread": 0.30000000000000027
+    },
+    {
+      "date": "2019-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999998,
+        0.0,
+        2e-06
+      ],
+      "FEDFUNDS": 2.41,
+      "SP500": 2803.69,
+      "UNRATE": 3.8,
+      "CPI": 254.277,
+      "DGS10": 2.76,
+      "USREC": 0.0,
+      "SP500_return": 0.035898364326277576,
+      "bond_return": -0.0031499999999999645,
+      "CPI_change": 0.0037817929172307974,
+      "yield_spread": 0.34999999999999964
+    },
+    {
+      "date": "2019-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 2.42,
+      "SP500": 2867.19,
+      "UNRATE": 3.7,
+      "CPI": 255.233,
+      "DGS10": 2.49,
+      "USREC": 0.0,
+      "SP500_return": 0.02264872364633752,
+      "bond_return": 0.02659999999999996,
+      "CPI_change": 0.0037596794047436433,
+      "yield_spread": 0.07000000000000028
+    },
+    {
+      "date": "2019-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 2.39,
+      "SP500": 2923.73,
+      "UNRATE": 3.6,
+      "CPI": 255.296,
+      "DGS10": 2.52,
+      "USREC": 0.0,
+      "SP500_return": 0.019719655830272798,
+      "bond_return": -0.0006249999999999823,
+      "CPI_change": 0.0002468332856644384,
+      "yield_spread": 0.1299999999999999
+    },
+    {
+      "date": "2019-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 2.38,
+      "SP500": 2923.73,
+      "UNRATE": 3.6,
+      "CPI": 255.213,
+      "DGS10": 2.52,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0021,
+      "CPI_change": -0.0003251128102280676,
+      "yield_spread": 0.14000000000000012
+    },
+    {
+      "date": "2019-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 2.4,
+      "SP500": 2964.33,
+      "UNRATE": 3.7,
+      "CPI": 255.802,
+      "DGS10": 2.03,
+      "USREC": 0.0,
+      "SP500_return": 0.013886371176544898,
+      "bond_return": 0.04620000000000002,
+      "CPI_change": 0.0023078761661827762,
+      "yield_spread": -0.3700000000000001
+    },
+    {
+      "date": "2019-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 2.13,
+      "SP500": 2953.56,
+      "UNRATE": 3.6,
+      "CPI": 256.036,
+      "DGS10": 1.9,
+      "USREC": 0.0,
+      "SP500_return": -0.0036331987329345505,
+      "bond_return": 0.013391666666666656,
+      "CPI_change": 0.0009147700174354512,
+      "yield_spread": -0.22999999999999998
+    },
+    {
+      "date": "2019-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 2.04,
+      "SP500": 2953.56,
+      "UNRATE": 3.5,
+      "CPI": 256.43,
+      "DGS10": 1.9,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0015833333333333333,
+      "CPI_change": 0.0015388460997671771,
+      "yield_spread": -0.14000000000000012
+    },
+    {
+      "date": "2019-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 1.83,
+      "SP500": 2940.25,
+      "UNRATE": 3.6,
+      "CPI": 257.155,
+      "DGS10": 1.65,
+      "USREC": 0.0,
+      "SP500_return": -0.004506426143365938,
+      "bond_return": 0.02408333333333333,
+      "CPI_change": 0.0028272822992627678,
+      "yield_spread": -0.18000000000000016
+    },
+    {
+      "date": "2019-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 1.55,
+      "SP500": 3066.91,
+      "UNRATE": 3.6,
+      "CPI": 257.879,
+      "DGS10": 1.73,
+      "USREC": 0.0,
+      "SP500_return": 0.043077969560411544,
+      "bond_return": -0.005825000000000007,
+      "CPI_change": 0.00281542260504386,
+      "yield_spread": 0.17999999999999994
+    },
+    {
+      "date": "2019-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 1.55,
+      "SP500": 3066.91,
+      "UNRATE": 3.6,
+      "CPI": 258.63,
+      "DGS10": 1.73,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014416666666666666,
+      "CPI_change": 0.0029122185210892493,
+      "yield_spread": 0.17999999999999994
+    },
+    {
+      "date": "2020-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 1.55,
+      "SP500": 3066.91,
+      "UNRATE": 3.6,
+      "CPI": 259.127,
+      "DGS10": 1.73,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014416666666666666,
+      "CPI_change": 0.0019216641534238743,
+      "yield_spread": 0.17999999999999994
+    },
+    {
+      "date": "2020-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999786,
+        0.00021,
+        5e-06
+      ],
+      "FEDFUNDS": 1.58,
+      "SP500": 3066.91,
+      "UNRATE": 3.5,
+      "CPI": 259.25,
+      "DGS10": 1.73,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014416666666666666,
+      "CPI_change": 0.0004746707213065804,
+      "yield_spread": 0.1499999999999999
+    },
+    {
+      "date": "2020-03-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 0.65,
+      "SP500": null,
+      "UNRATE": 4.4,
+      "CPI": 258.076,
+      "DGS10": null,
+      "USREC": 1.0,
+      "SP500_return": 0.0,
+      "bond_return": null,
+      "CPI_change": -0.004528447444551498,
+      "yield_spread": null
+    },
+    {
+      "date": "2020-04-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.05,
+      "SP500": 2470.5,
+      "UNRATE": 14.8,
+      "CPI": 256.032,
+      "DGS10": 0.62,
+      "USREC": 1.0,
+      "SP500_return": -0.1944660912775399,
+      "bond_return": null,
+      "CPI_change": -0.007920147553434065,
+      "yield_spread": 0.57
+    },
+    {
+      "date": "2020-05-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.05,
+      "SP500": 2830.71,
+      "UNRATE": 13.2,
+      "CPI": 255.802,
+      "DGS10": 0.64,
+      "USREC": 0.0,
+      "SP500_return": 0.1458044930176079,
+      "bond_return": -0.0012833333333333351,
+      "CPI_change": -0.0008983252093487382,
+      "yield_spread": 0.59
+    },
+    {
+      "date": "2020-06-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 3055.73,
+      "UNRATE": 11.0,
+      "CPI": 257.042,
+      "DGS10": 0.66,
+      "USREC": 0.0,
+      "SP500_return": 0.07949242416213598,
+      "bond_return": -0.0012666666666666683,
+      "CPI_change": 0.004847499237691677,
+      "yield_spread": 0.5800000000000001
+    },
+    {
+      "date": "2020-07-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 3115.86,
+      "UNRATE": 10.2,
+      "CPI": 258.352,
+      "DGS10": 0.69,
+      "USREC": 0.0,
+      "SP500_return": 0.019677785668236414,
+      "bond_return": -0.002149999999999992,
+      "CPI_change": 0.005096443382793581,
+      "yield_spread": 0.6
+    },
+    {
+      "date": "2020-08-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.1,
+      "SP500": 3115.86,
+      "UNRATE": 8.4,
+      "CPI": 259.316,
+      "DGS10": 0.69,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.000575,
+      "CPI_change": 0.003731343283582156,
+      "yield_spread": 0.59
+    },
+    {
+      "date": "2020-09-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 3526.65,
+      "UNRATE": 7.8,
+      "CPI": 259.997,
+      "DGS10": 0.68,
+      "USREC": 0.0,
+      "SP500_return": 0.13183840095511346,
+      "bond_return": 0.0014749999999999906,
+      "CPI_change": 0.002626139536318739,
+      "yield_spread": 0.5900000000000001
+    },
+    {
+      "date": "2020-10-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 3380.8,
+      "UNRATE": 6.9,
+      "CPI": 260.319,
+      "DGS10": 0.68,
+      "USREC": 0.0,
+      "SP500_return": -0.04135652814994395,
+      "bond_return": 0.0005666666666666667,
+      "CPI_change": 0.001238475828567287,
+      "yield_spread": 0.5900000000000001
+    },
+    {
+      "date": "2020-11-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 3380.8,
+      "UNRATE": 6.7,
+      "CPI": 260.911,
+      "DGS10": 0.68,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0005666666666666667,
+      "CPI_change": 0.002274132890799363,
+      "yield_spread": 0.5900000000000001
+    },
+    {
+      "date": "2020-12-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.999998,
+        2e-06
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 3662.45,
+      "UNRATE": 6.7,
+      "CPI": 262.045,
+      "DGS10": 0.92,
+      "USREC": 0.0,
+      "SP500_return": 0.08330868433506855,
+      "bond_return": -0.021033333333333334,
+      "CPI_change": 0.004346309661148906,
+      "yield_spread": 0.8300000000000001
+    },
+    {
+      "date": "2021-01-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.99928,
+        0.00072
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 3662.45,
+      "UNRATE": 6.4,
+      "CPI": 262.687,
+      "DGS10": 0.92,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0007666666666666667,
+      "CPI_change": 0.0024499608845809373,
+      "yield_spread": 0.8300000000000001
+    },
+    {
+      "date": "2021-02-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.957014,
+        0.042986
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 3773.86,
+      "UNRATE": 6.2,
+      "CPI": 263.579,
+      "DGS10": 1.09,
+      "USREC": 0.0,
+      "SP500_return": 0.03041952791164393,
+      "bond_return": -0.014533333333333336,
+      "CPI_change": 0.0033956762230333837,
+      "yield_spread": 1.01
+    },
+    {
+      "date": "2021-03-01",
+      "regime": 1,
+      "regime_label": "High-Vol Crisis",
+      "regime_probs": [
+        0.0,
+        0.582336,
+        0.417664
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 3901.82,
+      "UNRATE": 6.1,
+      "CPI": 264.961,
+      "DGS10": 1.45,
+      "USREC": 0.0,
+      "SP500_return": 0.03390692818493535,
+      "bond_return": -0.03149166666666666,
+      "CPI_change": 0.0052432098156529605,
+      "yield_spread": 1.38
+    },
+    {
+      "date": "2021-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.199751,
+        0.800249
+      ],
+      "FEDFUNDS": 0.07,
+      "SP500": 4019.87,
+      "UNRATE": 6.1,
+      "CPI": 266.614,
+      "DGS10": 1.69,
+      "USREC": 0.0,
+      "SP500_return": 0.03025511171709616,
+      "bond_return": -0.02039166666666667,
+      "CPI_change": 0.006238653990587206,
+      "yield_spread": 1.6199999999999999
+    },
+    {
+      "date": "2021-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.01029,
+        0.98971
+      ],
+      "FEDFUNDS": 0.06,
+      "SP500": 4019.87,
+      "UNRATE": 5.8,
+      "CPI": 268.383,
+      "DGS10": 1.69,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0014083333333333333,
+      "CPI_change": 0.006635060424433847,
+      "yield_spread": 1.63
+    },
+    {
+      "date": "2021-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.000623,
+        0.999377
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4202.04,
+      "UNRATE": 5.9,
+      "CPI": 270.654,
+      "DGS10": 1.62,
+      "USREC": 0.0,
+      "SP500_return": 0.04531738588561329,
+      "bond_return": 0.007708333333333319,
+      "CPI_change": 0.00846178781815543,
+      "yield_spread": 1.54
+    },
+    {
+      "date": "2021-07-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        7e-06,
+        0.000146,
+        0.999847
+      ],
+      "FEDFUNDS": 0.1,
+      "SP500": 4319.94,
+      "UNRATE": 5.4,
+      "CPI": 271.903,
+      "DGS10": 1.48,
+      "USREC": 0.0,
+      "SP500_return": 0.02805780049690143,
+      "bond_return": 0.013950000000000011,
+      "CPI_change": 0.004614747980816958,
+      "yield_spread": 1.38
+    },
+    {
+      "date": "2021-08-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        6.7e-05,
+        7.2e-05,
+        0.999862
+      ],
+      "FEDFUNDS": 0.09,
+      "SP500": 4319.94,
+      "UNRATE": 5.1,
+      "CPI": 272.676,
+      "DGS10": 1.48,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0012333333333333332,
+      "CPI_change": 0.002842925602144719,
+      "yield_spread": 1.39
+    },
+    {
+      "date": "2021-09-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000162,
+        3.3e-05,
+        0.999805
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4524.09,
+      "UNRATE": 4.7,
+      "CPI": 273.91,
+      "DGS10": 1.31,
+      "USREC": 0.0,
+      "SP500_return": 0.04725760080001118,
+      "bond_return": 0.016533333333333327,
+      "CPI_change": 0.004525517463950024,
+      "yield_spread": 1.23
+    },
+    {
+      "date": "2021-10-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4357.04,
+      "UNRATE": 4.5,
+      "CPI": 276.55,
+      "DGS10": 1.48,
+      "USREC": 0.0,
+      "SP500_return": -0.03692455278299067,
+      "bond_return": -0.014208333333333328,
+      "CPI_change": 0.00963820232923207,
+      "yield_spread": 1.4
+    },
+    {
+      "date": "2021-11-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1e-06,
+        2e-06,
+        0.999997
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4613.67,
+      "UNRATE": 4.1,
+      "CPI": 278.919,
+      "DGS10": 1.58,
+      "USREC": 0.0,
+      "SP500_return": 0.058900078952683455,
+      "bond_return": -0.007766666666666675,
+      "CPI_change": 0.00856626288193807,
+      "yield_spread": 1.5
+    },
+    {
+      "date": "2021-12-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        2.5e-05,
+        3e-06,
+        0.999973
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4513.04,
+      "UNRATE": 3.9,
+      "CPI": 280.845,
+      "DGS10": 1.43,
+      "USREC": 0.0,
+      "SP500_return": -0.0218112695533057,
+      "bond_return": 0.01481666666666668,
+      "CPI_change": 0.006905230550805275,
+      "yield_spread": 1.3499999999999999
+    },
+    {
+      "date": "2022-01-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        6.9e-05,
+        9e-06,
+        0.999922
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4513.04,
+      "UNRATE": 4.0,
+      "CPI": 282.543,
+      "DGS10": 1.43,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0011916666666666666,
+      "CPI_change": 0.006046039630400957,
+      "yield_spread": 1.3499999999999999
+    },
+    {
+      "date": "2022-02-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        1.3e-05,
+        1.9e-05,
+        0.999968
+      ],
+      "FEDFUNDS": 0.08,
+      "SP500": 4546.54,
+      "UNRATE": 3.9,
+      "CPI": 284.5,
+      "DGS10": 1.81,
+      "USREC": 0.0,
+      "SP500_return": 0.007422934430007189,
+      "bond_return": -0.03300833333333334,
+      "CPI_change": 0.0069263793475682345,
+      "yield_spread": 1.73
+    },
+    {
+      "date": "2022-03-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "FEDFUNDS": 0.2,
+      "SP500": 4306.26,
+      "UNRATE": 3.7,
+      "CPI": 287.674,
+      "DGS10": 1.72,
+      "USREC": 0.0,
+      "SP500_return": -0.052848979663656315,
+      "bond_return": 0.00960833333333334,
+      "CPI_change": 0.011156414762741651,
+      "yield_spread": 1.52
+    },
+    {
+      "date": "2022-04-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.000208,
+        0.001364,
+        0.998428
+      ],
+      "FEDFUNDS": 0.33,
+      "SP500": 4545.86,
+      "UNRATE": 3.7,
+      "CPI": 288.561,
+      "DGS10": 2.39,
+      "USREC": 0.0,
+      "SP500_return": 0.05563992884777025,
+      "bond_return": -0.05886666666666668,
+      "CPI_change": 0.0030833512934780316,
+      "yield_spread": 2.06
+    },
+    {
+      "date": "2022-05-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        2e-06,
+        0.999998
+      ],
+      "FEDFUNDS": 0.77,
+      "SP500": 4545.86,
+      "UNRATE": 3.6,
+      "CPI": 291.298,
+      "DGS10": 2.39,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0019916666666666668,
+      "CPI_change": 0.00948499623996324,
+      "yield_spread": 1.62
+    },
+    {
+      "date": "2022-06-01",
+      "regime": 2,
+      "regime_label": "Transition/Tightening",
+      "regime_probs": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "FEDFUNDS": 1.21,
+      "SP500": 4101.23,
+      "UNRATE": 3.6,
+      "CPI": 294.957,
+      "DGS10": 2.94,
+      "USREC": 0.0,
+      "SP500_return": -0.097809875359118,
+      "bond_return": -0.04750833333333331,
+      "CPI_change": 0.012561019986405686,
+      "yield_spread": 1.73
+    },
+    {
+      "date": "2022-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.91232,
+        0.0,
+        0.08768
+      ],
+      "FEDFUNDS": 1.68,
+      "SP500": 3825.33,
+      "UNRATE": 3.5,
+      "CPI": 294.913,
+      "DGS10": 2.88,
+      "USREC": 0.0,
+      "SP500_return": -0.06727250117647621,
+      "bond_return": 0.007850000000000005,
+      "CPI_change": -0.00014917428642136077,
+      "yield_spread": 1.2
+    },
+    {
+      "date": "2022-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999941,
+        0.0,
+        5.9e-05
+      ],
+      "FEDFUNDS": 2.33,
+      "SP500": 4118.63,
+      "UNRATE": 3.6,
+      "CPI": 295.097,
+      "DGS10": 2.6,
+      "USREC": 0.0,
+      "SP500_return": 0.07667312362593548,
+      "bond_return": 0.027599999999999982,
+      "CPI_change": 0.0006239128149656548,
+      "yield_spread": 0.27
+    },
+    {
+      "date": "2022-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999959,
+        0.0,
+        4.1e-05
+      ],
+      "FEDFUNDS": 2.56,
+      "SP500": 3966.85,
+      "UNRATE": 3.5,
+      "CPI": 296.349,
+      "DGS10": 3.26,
+      "USREC": 0.0,
+      "SP500_return": -0.03685206002967012,
+      "bond_return": -0.05723333333333332,
+      "CPI_change": 0.0042426727482827165,
+      "yield_spread": 0.6999999999999997
+    },
+    {
+      "date": "2022-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999996,
+        0.0,
+        4e-06
+      ],
+      "FEDFUNDS": 3.08,
+      "SP500": 3966.85,
+      "UNRATE": 3.6,
+      "CPI": 298.007,
+      "DGS10": 3.26,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0027166666666666663,
+      "CPI_change": 0.005594754832984217,
+      "yield_spread": 0.17999999999999972
+    },
+    {
+      "date": "2022-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 3.78,
+      "SP500": 3856.1,
+      "UNRATE": 3.6,
+      "CPI": 298.786,
+      "DGS10": 4.07,
+      "USREC": 0.0,
+      "SP500_return": -0.027918877698929867,
+      "bond_return": -0.07018333333333338,
+      "CPI_change": 0.002614032556282231,
+      "yield_spread": 0.2900000000000005
+    },
+    {
+      "date": "2022-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.1,
+      "SP500": 4076.57,
+      "UNRATE": 3.5,
+      "CPI": 298.832,
+      "DGS10": 3.53,
+      "USREC": 0.0,
+      "SP500_return": 0.057174347138300385,
+      "bond_return": 0.051991666666666714,
+      "CPI_change": 0.0001539563433359259,
+      "yield_spread": -0.5699999999999998
+    },
+    {
+      "date": "2023-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 4076.57,
+      "UNRATE": 3.5,
+      "CPI": 300.42,
+      "DGS10": 3.53,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0029416666666666666,
+      "CPI_change": 0.005314022594635093,
+      "yield_spread": -0.8000000000000003
+    },
+    {
+      "date": "2023-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.57,
+      "SP500": 4119.21,
+      "UNRATE": 3.6,
+      "CPI": 301.45,
+      "DGS10": 3.39,
+      "USREC": 0.0,
+      "SP500_return": 0.01045977378040841,
+      "bond_return": 0.015541666666666638,
+      "CPI_change": 0.003428533386591992,
+      "yield_spread": -1.1800000000000002
+    },
+    {
+      "date": "2023-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.65,
+      "SP500": 3951.39,
+      "UNRATE": 3.5,
+      "CPI": 301.821,
+      "DGS10": 4.01,
+      "USREC": 0.0,
+      "SP500_return": -0.040740821662406224,
+      "bond_return": -0.05297499999999997,
+      "CPI_change": 0.0012307181953890023,
+      "yield_spread": -0.6400000000000006
+    },
+    {
+      "date": "2023-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.83,
+      "SP500": 3951.39,
+      "UNRATE": 3.4,
+      "CPI": 302.845,
+      "DGS10": 4.01,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033416666666666664,
+      "CPI_change": 0.003392739405144063,
+      "yield_spread": -0.8200000000000003
+    },
+    {
+      "date": "2023-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.06,
+      "SP500": 4167.87,
+      "UNRATE": 3.6,
+      "CPI": 303.334,
+      "DGS10": 3.59,
+      "USREC": 0.0,
+      "SP500_return": 0.05478578424301328,
+      "bond_return": 0.04114166666666666,
+      "CPI_change": 0.0016146873813336349,
+      "yield_spread": -1.4699999999999998
+    },
+    {
+      "date": "2023-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.08,
+      "SP500": 4221.02,
+      "UNRATE": 3.6,
+      "CPI": 304.014,
+      "DGS10": 3.61,
+      "USREC": 0.0,
+      "SP500_return": 0.012752317130812818,
+      "bond_return": 0.0011916666666666647,
+      "CPI_change": 0.00224175331482801,
+      "yield_spread": -1.4700000000000002
+    },
+    {
+      "date": "2023-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.12,
+      "SP500": 4221.02,
+      "UNRATE": 3.5,
+      "CPI": 304.609,
+      "DGS10": 3.61,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0030083333333333333,
+      "CPI_change": 0.001957146710348745,
+      "yield_spread": -1.5100000000000002
+    },
+    {
+      "date": "2023-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4576.73,
+      "UNRATE": 3.7,
+      "CPI": 306.082,
+      "DGS10": 4.05,
+      "USREC": 0.0,
+      "SP500_return": 0.08427110035015217,
+      "bond_return": -0.03659166666666666,
+      "CPI_change": 0.004835707415079771,
+      "yield_spread": -1.2800000000000002
+    },
+    {
+      "date": "2023-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4515.77,
+      "UNRATE": 3.7,
+      "CPI": 307.276,
+      "DGS10": 4.18,
+      "USREC": 0.0,
+      "SP500_return": -0.013319553480323099,
+      "bond_return": -0.00832499999999999,
+      "CPI_change": 0.003900915440960384,
+      "yield_spread": -1.1500000000000004
+    },
+    {
+      "date": "2023-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4515.77,
+      "UNRATE": 3.9,
+      "CPI": 307.696,
+      "DGS10": 4.18,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003483333333333333,
+      "CPI_change": 0.0013668493471667986,
+      "yield_spread": -1.1500000000000004
+    },
+    {
+      "date": "2023-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4237.86,
+      "UNRATE": 3.7,
+      "CPI": 308.148,
+      "DGS10": 4.77,
+      "USREC": 0.0,
+      "SP500_return": -0.06154210688321171,
+      "bond_return": -0.049616666666666656,
+      "CPI_change": 0.0014689823722116024,
+      "yield_spread": -0.5600000000000005
+    },
+    {
+      "date": "2023-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4594.63,
+      "UNRATE": 3.8,
+      "CPI": 308.741,
+      "DGS10": 4.22,
+      "USREC": 0.0,
+      "SP500_return": 0.08418635820909626,
+      "bond_return": 0.05347499999999998,
+      "CPI_change": 0.001924399963653789,
+      "yield_spread": -1.1100000000000003
+    },
+    {
+      "date": "2024-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4594.63,
+      "UNRATE": 3.7,
+      "CPI": 309.698,
+      "DGS10": 4.22,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0035166666666666666,
+      "CPI_change": 0.0030996854969052023,
+      "yield_spread": -1.1100000000000003
+    },
+    {
+      "date": "2024-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 4906.19,
+      "UNRATE": 3.9,
+      "CPI": 310.967,
+      "DGS10": 3.87,
+      "USREC": 0.0,
+      "SP500_return": 0.0678095951142963,
+      "bond_return": 0.03501666666666663,
+      "CPI_change": 0.0040975401843086345,
+      "yield_spread": -1.46
+    },
+    {
+      "date": "2024-03-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 5137.08,
+      "UNRATE": 3.9,
+      "CPI": 312.345,
+      "DGS10": 4.19,
+      "USREC": 0.0,
+      "SP500_return": 0.04706095768814511,
+      "bond_return": -0.02557500000000003,
+      "CPI_change": 0.004431338373525273,
+      "yield_spread": -1.1399999999999997
+    },
+    {
+      "date": "2024-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 5243.77,
+      "UNRATE": 3.9,
+      "CPI": 313.023,
+      "DGS10": 4.33,
+      "USREC": 0.0,
+      "SP500_return": 0.020768607847259535,
+      "bond_return": -0.009108333333333303,
+      "CPI_change": 0.0021706766556210955,
+      "yield_spread": -1.0
+    },
+    {
+      "date": "2024-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 5018.39,
+      "UNRATE": 3.9,
+      "CPI": 313.175,
+      "DGS10": 4.63,
+      "USREC": 0.0,
+      "SP500_return": -0.042980527368667976,
+      "bond_return": -0.02339166666666665,
+      "CPI_change": 0.0004855873210594108,
+      "yield_spread": -0.7000000000000002
+    },
+    {
+      "date": "2024-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 5018.39,
+      "UNRATE": 4.1,
+      "CPI": 313.044,
+      "DGS10": 4.63,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0038583333333333334,
+      "CPI_change": -0.00041829647960411886,
+      "yield_spread": -0.7000000000000002
+    },
+    {
+      "date": "2024-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 5475.09,
+      "UNRATE": 4.2,
+      "CPI": 313.569,
+      "DGS10": 4.48,
+      "USREC": 0.0,
+      "SP500_return": 0.09100528257070484,
+      "bond_return": 0.017358333333333285,
+      "CPI_change": 0.0016770805381991494,
+      "yield_spread": -0.8499999999999996
+    },
+    {
+      "date": "2024-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.33,
+      "SP500": 5446.68,
+      "UNRATE": 4.2,
+      "CPI": 314.062,
+      "DGS10": 3.99,
+      "USREC": 0.0,
+      "SP500_return": -0.005188955797986838,
+      "bond_return": 0.04783333333333335,
+      "CPI_change": 0.001572221743858515,
+      "yield_spread": -1.3399999999999999
+    },
+    {
+      "date": "2024-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 5.13,
+      "SP500": 5446.68,
+      "UNRATE": 4.1,
+      "CPI": 314.732,
+      "DGS10": 3.99,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0033250000000000003,
+      "CPI_change": 0.002133336729690294,
+      "yield_spread": -1.1399999999999997
+    },
+    {
+      "date": "2024-10-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.83,
+      "SP500": 5708.75,
+      "UNRATE": 4.1,
+      "CPI": 315.631,
+      "DGS10": 3.74,
+      "USREC": 0.0,
+      "SP500_return": 0.048115549288741066,
+      "bond_return": 0.025825,
+      "CPI_change": 0.002856398459641696,
+      "yield_spread": -1.0899999999999999
+    },
+    {
+      "date": "2024-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.64,
+      "SP500": 5728.8,
+      "UNRATE": 4.2,
+      "CPI": 316.528,
+      "DGS10": 4.37,
+      "USREC": 0.0,
+      "SP500_return": 0.0035121523976351376,
+      "bond_return": -0.05358333333333333,
+      "CPI_change": 0.0028419261732848256,
+      "yield_spread": -0.2699999999999996
+    },
+    {
+      "date": "2024-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.48,
+      "SP500": 5728.8,
+      "UNRATE": 4.1,
+      "CPI": 317.604,
+      "DGS10": 4.37,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0036416666666666667,
+      "CPI_change": 0.003399383308901438,
+      "yield_spread": -0.11000000000000032
+    },
+    {
+      "date": "2025-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 5728.8,
+      "UNRATE": 4.0,
+      "CPI": 318.961,
+      "DGS10": 4.37,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0036416666666666667,
+      "CPI_change": 0.0042726162139017365,
+      "yield_spread": 0.040000000000000036
+    },
+    {
+      "date": "2025-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 5728.8,
+      "UNRATE": 4.2,
+      "CPI": 319.679,
+      "DGS10": 4.37,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0036416666666666667,
+      "CPI_change": 0.002251058906888259,
+      "yield_spread": 0.040000000000000036
+    },
+    {
+      "date": "2025-03-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 4.33,
+      "SP500": null,
+      "UNRATE": 4.2,
+      "CPI": 319.785,
+      "DGS10": null,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": null,
+      "CPI_change": 0.0003315826188146076,
+      "yield_spread": null
+    },
+    {
+      "date": "2025-04-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 5633.07,
+      "UNRATE": 4.2,
+      "CPI": 320.302,
+      "DGS10": 4.17,
+      "USREC": 0.0,
+      "SP500_return": -0.016710305823209093,
+      "bond_return": null,
+      "CPI_change": 0.0016167112278562268,
+      "yield_spread": -0.16000000000000014
+    },
+    {
+      "date": "2025-05-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 5604.14,
+      "UNRATE": 4.3,
+      "CPI": 320.62,
+      "DGS10": 4.25,
+      "USREC": 0.0,
+      "SP500_return": -0.005135743031774775,
+      "bond_return": -0.003725000000000007,
+      "CPI_change": 0.0009928130327003792,
+      "yield_spread": -0.08000000000000007
+    },
+    {
+      "date": "2025-06-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 5604.14,
+      "UNRATE": 4.1,
+      "CPI": 321.435,
+      "DGS10": 4.25,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0035416666666666665,
+      "CPI_change": 0.002541949971929469,
+      "yield_spread": -0.08000000000000007
+    },
+    {
+      "date": "2025-07-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 6198.01,
+      "UNRATE": 4.3,
+      "CPI": 322.169,
+      "DGS10": 4.26,
+      "USREC": 0.0,
+      "SP500_return": 0.10596987227299826,
+      "bond_return": 0.002641666666666686,
+      "CPI_change": 0.0022835098853577485,
+      "yield_spread": -0.07000000000000028
+    },
+    {
+      "date": "2025-08-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.33,
+      "SP500": 6238.01,
+      "UNRATE": 4.3,
+      "CPI": 323.291,
+      "DGS10": 4.23,
+      "USREC": 0.0,
+      "SP500_return": 0.006453684327711651,
+      "bond_return": 0.006249999999999942,
+      "CPI_change": 0.003482644202266627,
+      "yield_spread": -0.09999999999999964
+    },
+    {
+      "date": "2025-09-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 4.22,
+      "SP500": 6238.01,
+      "UNRATE": 4.4,
+      "CPI": 324.245,
+      "DGS10": 4.23,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0035250000000000004,
+      "CPI_change": 0.002950901819104068,
+      "yield_spread": 0.010000000000000675
+    },
+    {
+      "date": "2025-10-01",
+      "regime": null,
+      "regime_label": null,
+      "regime_probs": null,
+      "FEDFUNDS": 4.09,
+      "SP500": 6711.2,
+      "UNRATE": null,
+      "CPI": null,
+      "DGS10": 4.12,
+      "USREC": 0.0,
+      "SP500_return": 0.07585592200076618,
+      "bond_return": 0.013425000000000029,
+      "CPI_change": 0.0,
+      "yield_spread": 0.03000000000000025
+    },
+    {
+      "date": "2025-11-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "FEDFUNDS": 3.88,
+      "SP500": 6711.2,
+      "UNRATE": 4.5,
+      "CPI": 325.063,
+      "DGS10": 4.12,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.0034333333333333334,
+      "CPI_change": 0.002522783697512576,
+      "yield_spread": 0.2400000000000002
+    },
+    {
+      "date": "2025-12-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 3.72,
+      "SP500": 6812.63,
+      "UNRATE": 4.4,
+      "CPI": 326.031,
+      "DGS10": 4.09,
+      "USREC": 0.0,
+      "SP500_return": 0.015113541542496112,
+      "bond_return": 0.006133333333333355,
+      "CPI_change": 0.00297788428704604,
+      "yield_spread": 0.36999999999999966
+    },
+    {
+      "date": "2026-01-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999999,
+        0.0,
+        1e-06
+      ],
+      "FEDFUNDS": 3.64,
+      "SP500": 6812.63,
+      "UNRATE": 4.3,
+      "CPI": 326.588,
+      "DGS10": 4.09,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003408333333333333,
+      "CPI_change": 0.00170842649932057,
+      "yield_spread": 0.44999999999999973
+    },
+    {
+      "date": "2026-02-01",
+      "regime": 0,
+      "regime_label": "Low-Vol Growth",
+      "regime_probs": [
+        0.999945,
+        5e-06,
+        5e-05
+      ],
+      "FEDFUNDS": 3.64,
+      "SP500": 6812.63,
+      "UNRATE": 4.4,
+      "CPI": 327.46,
+      "DGS10": 4.09,
+      "USREC": 0.0,
+      "SP500_return": 0.0,
+      "bond_return": 0.003408333333333333,
+      "CPI_change": 0.0026700307420970404,
+      "yield_spread": 0.44999999999999973
+    }
+  ],
+  "state_statistics": [
+    {
+      "regime_id": 0,
+      "label": "Low-Vol Growth",
+      "n_months": 153,
+      "pct_months": 0.4487,
+      "recession_overlap_pct": 0.0196,
+      "mean_SP500_return": 0.009374950777876027,
+      "std_SP500_return": 0.040731427706606246,
+      "mean_bond_return": 0.004609758771929824,
+      "std_bond_return": 0.022323342337402644,
+      "max_drawdown_equity": -0.1963957266178432,
+      "max_drawdown_bond": -0.1474965898551895,
+      "equity_bond_corr": 0.05706562008368544,
+      "mean_FEDFUNDS": 4.262156862745098,
+      "mean_DGS10": 4.311699346405229,
+      "mean_UNRATE": 4.182352941176471,
+      "mean_CPI_change": 0.0021595346149622056,
+      "mean_yield_spread": 0.04954248366013072
+    },
+    {
+      "regime_id": 1,
+      "label": "High-Vol Crisis",
+      "n_months": 108,
+      "pct_months": 0.3167,
+      "recession_overlap_pct": 0.0648,
+      "mean_SP500_return": 0.011930299834535526,
+      "std_SP500_return": 0.04664709913024866,
+      "mean_bond_return": 0.0015090476190476193,
+      "std_bond_return": 0.025499789704865584,
+      "max_drawdown_equity": -0.26046196010778827,
+      "max_drawdown_bond": -0.12258349208773439,
+      "equity_bond_corr": -0.38654697406077954,
+      "mean_FEDFUNDS": 0.45342592592592595,
+      "mean_DGS10": 2.9074074074074074,
+      "mean_UNRATE": 7.741666666666668,
+      "mean_CPI_change": 0.001872501883796948,
+      "mean_yield_spread": 2.453981481481481
+    },
+    {
+      "regime_id": 2,
+      "label": "Transition/Tightening",
+      "n_months": 80,
+      "pct_months": 0.2346,
+      "recession_overlap_pct": 0.2125,
+      "mean_SP500_return": -0.0029598348186558624,
+      "std_SP500_return": 0.05001015559408499,
+      "mean_bond_return": 0.003220520833333334,
+      "std_bond_return": 0.022747414689957984,
+      "max_drawdown_equity": -0.47453147676644264,
+      "max_drawdown_bond": -0.17682305607284474,
+      "equity_bond_corr": -0.4673181462366781,
+      "mean_FEDFUNDS": 1.128625,
+      "mean_DGS10": 2.89725,
+      "mean_UNRATE": 5.125,
+      "mean_CPI_change": 0.0023360775034697787,
+      "mean_yield_spread": 1.7686250000000001
+    }
+  ]
+}

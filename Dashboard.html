@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Regime-Aware Market Conditions Analyzer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f6fa;
+      color: #2c3e50;
+    }
+
+    /* ── Header ── */
+    #header {
+      background: #1a1f2e;
+      color: #fff;
+      padding: 18px 32px 14px;
+    }
+    #header h1 { font-size: 20px; font-weight: 600; letter-spacing: 0.3px; }
+    #header p  { font-size: 12px; color: #8899aa; margin-top: 3px; }
+
+    /* ── Legend ── */
+    #legend {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 10px 32px;
+      background: #fff;
+      border-bottom: 1px solid #e0e4ed;
+    }
+    #legend > span { font-size: 11px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.5px; }
+    .legend-item  { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #333; }
+    .legend-swatch { width: 14px; height: 14px; border-radius: 3px; opacity: 0.75; }
+
+    /* ── Panel containers ── */
+    .panel-wrap {
+      background: #fff;
+      margin: 14px 20px 0;
+      border-radius: 6px;
+      border: 1px solid #e0e4ed;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .panel-wrap:last-of-type { margin-bottom: 20px; }
+    .panel-title {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.6px; color: #555; padding: 10px 16px 0;
+    }
+
+    /* ── Toggle bars ── */
+    .toggle-bar {
+      display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 16px 6px;
+    }
+    .toggle-btn {
+      padding: 3px 10px; font-size: 11px; font-weight: 600;
+      border: 1.5px solid; border-radius: 20px;
+      background: transparent; cursor: pointer;
+      opacity: 0.35; transition: opacity 0.15s;
+    }
+    .toggle-btn.active { opacity: 1; }
+
+    /* ── SVG styles ── */
+    .axis path, .axis line { stroke: #ccd; }
+    .axis text { font-size: 11px; fill: #555; }
+    .grid line { stroke: #eef; stroke-dasharray: 3,3; }
+    .y-label   { font-size: 11px; fill: #666; }
+
+    /* ── Hover tooltip ── */
+    #tooltip {
+      position: absolute;
+      background: rgba(15, 20, 35, 0.92); color: #f0f4ff;
+      padding: 10px 14px; border-radius: 7px;
+      font-size: 13px; line-height: 1.6;
+      pointer-events: none; display: none;
+      max-width: 240px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      z-index: 100;
+    }
+    #tooltip strong { font-size: 14px; }
+    #tooltip .tip-row { color: #b0c4de; font-size: 11px; }
+    #tooltip .tip-val { color: #fff; font-weight: 600; }
+
+    /* ── Regime detail side panel ── */
+    #detail-panel {
+      position: fixed; top: 0; right: 0;
+      width: 300px; height: 100vh;
+      background: #1a1f2e; color: #e8edf5;
+      box-shadow: -6px 0 28px rgba(0,0,0,0.35);
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.22s ease;
+      z-index: 300;
+    }
+    #detail-panel.open { transform: translateX(0); }
+
+    #detail-panel-header {
+      padding: 16px 18px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; background: #1a1f2e; z-index: 1;
+    }
+    #detail-panel-title { font-size: 14px; font-weight: 700; }
+    #detail-close {
+      cursor: pointer; font-size: 20px; line-height: 1;
+      color: #6a84a0; background: none; border: none; padding: 0 4px;
+    }
+    #detail-close:hover { color: #fff; }
+
+    .detail-section {
+      padding: 11px 18px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .detail-section-title {
+      font-size: 9px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: #6a84a0; margin-bottom: 7px;
+    }
+    .detail-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 12px; padding: 2.5px 0;
+    }
+    .detail-label { color: #7a94b0; }
+    .detail-value { font-weight: 600; color: #e8edf5; }
+    .detail-value.pos { color: #2ecc71; }
+    .detail-value.neg { color: #e74c3c; }
+    .detail-note {
+      font-size: 10px; color: #4a6070; text-align: center;
+      padding: 10px 18px 12px; font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header">
+  <h1>Regime-Aware Market Conditions Analyzer</h1>
+  <p>Hidden Markov Model · 3 Market Regimes · FRED Data 1997–2026 · CSE 6242 Team #255</p>
+</div>
+
+<div id="legend">
+  <span>Regimes:</span>
+</div>
+
+<!-- Panel 1 — Regime Timeline -->
+<div class="panel-wrap" id="wrap1">
+  <div class="panel-title">Regime Timeline — Cumulative Returns (click band for details)</div>
+  <div id="toggle-bar-p1" class="toggle-bar"></div>
+  <div id="panel1"></div>
+</div>
+
+<!-- Panel 2 — Macro Conditions -->
+<div class="panel-wrap" id="wrap2">
+  <div class="panel-title">Macro Conditions</div>
+  <div id="toggle-bar-p2" class="toggle-bar"></div>
+  <div id="panel2"></div>
+</div>
+
+<!-- Panel 3 — Regime Summary -->
+<div class="panel-wrap" id="wrap3">
+  <div class="panel-title">Regime Summary Statistics</div>
+  <div id="panel3"></div>
+</div>
+
+<!-- Hover tooltip -->
+<div id="tooltip"></div>
+
+<!-- Regime detail side panel (click-triggered) -->
+<div id="detail-panel">
+  <div id="detail-panel-header">
+    <span id="detail-panel-title">Regime Detail</span>
+    <button id="detail-close" title="Close (Esc)">×</button>
+  </div>
+  <div id="detail-body"></div>
+</div>
+
+<script src="lib/d3.min.js"></script>
+<script>
+//////////////////////////////////////////////////////////////////
+//  LAYOUT CONSTANTS
+//////////////////////////////////////////////////////////////////
+const TOTAL_W = 960;
+const ML = 72, MR = 30, MT = 20, MB_P2 = 36, MT_P3 = 40;
+const INNER_W = TOTAL_W - ML - MR;
+const H1 = 240, H2 = 210;
+// Panel 3: 2 rows × 3 cols
+const BAR_H   = 130;   // bar area height per row
+const ROW_GAP = 58;    // gap between rows (title + spacing)
+const H3_SVG  = 2 * BAR_H + ROW_GAP + MT_P3 + 24;
+
+const parseDate = d3.timeParse("%Y-%m-%d");
+const fmtDate   = d3.timeFormat("%b %Y");
+
+//////////////////////////////////////////////////////////////////
+//  LINE DEFINITIONS
+//////////////////////////////////////////////////////////////////
+const p1Lines = [
+  { key: "cumReturn",     label: "S&P 500",           color: "#2c3e50",  dash: null },
+  { key: "bondCumReturn", label: "10Y Treasury Bond",  color: "#e67e22",  dash: "5,3" },
+];
+const toggleStateP1 = { cumReturn: true, bondCumReturn: true };
+
+const macroLines = [
+  { key: "UNRATE",       label: "Unemployment (%)",   color: "#8e44ad" },
+  { key: "FEDFUNDS",     label: "Fed Funds Rate (%)", color: "#2980b9" },
+  { key: "yield_spread", label: "Yield Spread (%)",   color: "#16a085" },
+  { key: "CPI_YoY",      label: "CPI YoY (%)",        color: "#c0392b" },
+];
+const toggleStateP2 = {};
+macroLines.forEach(l => { toggleStateP2[l.key] = true; });
+
+//////////////////////////////////////////////////////////////////
+//  PANEL 3 METRICS — 2 rows × 3 cols
+//////////////////////////////////////////////////////////////////
+const metrics = [
+  // Row 0
+  { key: "mean_SP500_return",  label: "Avg Monthly Return",  row: 0, col: 0,
+    scale: v => v * 100,
+    fmt:   v => (v * 100).toFixed(2) + "%" },
+  { key: "std_SP500_return",   label: "Ann. Volatility",     row: 0, col: 1,
+    scale: v => v * Math.sqrt(12) * 100,
+    fmt:   v => (v * Math.sqrt(12) * 100).toFixed(1) + "%" },
+  { key: "max_drawdown_equity",label: "Max Drawdown (EQ)",   row: 0, col: 2,
+    scale: v => Math.abs(v * 100),
+    fmt:   v => Math.abs(v * 100).toFixed(1) + "%" },
+  // Row 1
+  { key: "equity_bond_corr",   label: "Equity-Bond Corr",   row: 1, col: 0,
+    scale: v => v,
+    fmt:   v => v.toFixed(3) },
+  { key: "mean_UNRATE",        label: "Avg Unemployment",    row: 1, col: 1,
+    scale: v => v,
+    fmt:   v => v.toFixed(1) + "%" },
+  { key: "mean_yield_spread",  label: "Avg Yield Spread",    row: 1, col: 2,
+    scale: v => v,
+    fmt:   v => v.toFixed(2) + "%" },
+];
+
+//////////////////////////////////////////////////////////////////
+//  HOVER TOOLTIP - This needs some work
+//////////////////////////////////////////////////////////////////
+const tooltip = d3.select("#tooltip");
+
+function showTooltip(event, band) {
+  const dur = Math.max(1, Math.round(
+    (band.endDate - band.startDate) / (1000 * 60 * 60 * 24 * 30)
+  ) + 1);
+  let html = `<strong style="color:${band.color}">${band.label}</strong><br>
+    <span class="tip-row">Period: </span><span class="tip-val">${fmtDate(band.startDate)} – ${fmtDate(band.endDate)}</span><br>
+    <span class="tip-row">Duration: </span><span class="tip-val">~${dur} months</span>`;
+  if (band.avgReturn !== null)
+    html += `<br><span class="tip-row">Avg Eq. Return (mo.): </span><span class="tip-val">${band.avgReturn.toFixed(2)}%</span>`;
+  if (band.avgVolatility !== null)
+    html += `<br><span class="tip-row">Ann. Volatility: </span><span class="tip-val">${band.avgVolatility.toFixed(1)}%</span>`;
+  html += `<br><span class="tip-row" style="color:#6a84a0;font-size:10px;">Click for full detail →</span>`;
+  tooltip.style("display", "block").html(html);
+  posTooltip(event);
+}
+function posTooltip(event) {
+  tooltip.style("left", (event.pageX + 14) + "px").style("top", (event.pageY - 10) + "px");
+}
+function hideTooltip() { tooltip.style("display", "none"); }
+
+//////////////////////////////////////////////////////////////////
+//  DETAIL PANEL HELPERS
+//////////////////////////////////////////////////////////////////
+function pearsonCorr(x, y) {
+  const n = x.length;
+  if (n < 3) return null;
+  const mx = d3.mean(x), my = d3.mean(y);
+  let num = 0, dx2 = 0, dy2 = 0;
+  for (let i = 0; i < n; i++) {
+    num += (x[i] - mx) * (y[i] - my);
+    dx2 += (x[i] - mx) ** 2;
+    dy2 += (y[i] - my) ** 2;
+  }
+  return dx2 > 0 && dy2 > 0 ? num / Math.sqrt(dx2 * dy2) : null;
+}
+
+function maxDrawdownPct(returns) {
+  if (!returns.length) return null;
+  let peak = 1, minDD = 0, cum = 1;
+  for (const r of returns) {
+    cum *= (1 + r);
+    if (cum > peak) peak = cum;
+    const dd = (cum - peak) / peak;
+    if (dd < minDD) minDD = dd;
+  }
+  return minDD * 100;
+}
+
+function openDetailPanel(band, ts) {
+  const rows = ts.filter(d => d.date >= band.startDate && d.date <= band.endDate);
+  const eqR  = rows.filter(d => d.SP500_return !== null).map(d => d.SP500_return);
+  const bdR  = rows.filter(d => d.bond_return  !== null).map(d => d.bond_return);
+  const paired = rows.filter(d => d.SP500_return !== null && d.bond_return !== null);
+  const corr   = pearsonCorr(paired.map(d => d.SP500_return), paired.map(d => d.bond_return));
+
+  const eqDD  = eqR.length > 1 ? maxDrawdownPct(eqR)  : null;
+  const bdDD  = bdR.length > 1 ? maxDrawdownPct(bdR)  : null;
+  const eqVol = eqR.length > 1 ? d3.deviation(eqR) * Math.sqrt(12) * 100 : null;
+  const bdVol = bdR.length > 1 ? d3.deviation(bdR) * Math.sqrt(12) * 100 : null;
+  const eqAvg = eqR.length ? d3.mean(eqR) * 100 : null;
+  const bdAvg = bdR.length ? d3.mean(bdR) * 100 : null;
+
+  const avgOf = (arr, field) => {
+    const vals = arr.filter(d => d[field] !== null && d[field] !== undefined).map(d => d[field]);
+    return vals.length ? d3.mean(vals) : null;
+  };
+
+  const dur = Math.max(1, Math.round((band.endDate - band.startDate) / (1000*60*60*24*30)) + 1);
+
+  const f1  = v => v !== null ? v.toFixed(1) + "%" : "—";
+  const f2  = v => v !== null ? v.toFixed(2) + "%" : "—";
+  const fR  = v => v !== null ? (v >= 0 ? "+" : "") + v.toFixed(2) + "%" : "—";
+  const fDD = v => v !== null ? v.toFixed(1) + "%" : "—";
+  const fC  = v => v !== null ? v.toFixed(3) : "—";
+  const cls = v => v === null ? "" : v >= 0 ? " pos" : " neg";
+
+  const cpiYoY   = avgOf(rows, "CPI_YoY");
+  const unrate   = avgOf(rows, "UNRATE");
+  const fedfunds = avgOf(rows, "FEDFUNDS");
+  const yspread  = avgOf(rows, "yield_spread");
+
+  const html = `
+    <div class="detail-section">
+      <div class="detail-section-title">Period</div>
+      <div class="detail-row">
+        <span class="detail-label">Start</span>
+        <span class="detail-value">${fmtDate(band.startDate)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">End</span>
+        <span class="detail-value">${fmtDate(band.endDate)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Duration</span>
+        <span class="detail-value">~${dur} months</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-title">Returns (Monthly Avg)</div>
+      <div class="detail-row">
+        <span class="detail-label">Equity (S&amp;P 500)</span>
+        <span class="detail-value${cls(eqAvg)}">${fR(eqAvg)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Bond (10Y Tsy)</span>
+        <span class="detail-value${cls(bdAvg)}">${fR(bdAvg)}</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-title">Volatility (Ann.)</div>
+      <div class="detail-row">
+        <span class="detail-label">Equity</span>
+        <span class="detail-value">${f1(eqVol)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Bond</span>
+        <span class="detail-value">${f1(bdVol)}</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-title">Drawdown (Max Peak-to-Trough)</div>
+      <div class="detail-row">
+        <span class="detail-label">Equity</span>
+        <span class="detail-value neg">${fDD(eqDD)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Bond</span>
+        <span class="detail-value neg">${fDD(bdDD)}</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-title">Cross-Asset</div>
+      <div class="detail-row">
+        <span class="detail-label">Equity-Bond Corr</span>
+        <span class="detail-value${cls(corr)}">${fC(corr)}</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-title">Macro Conditions (Avg)</div>
+      <div class="detail-row">
+        <span class="detail-label">CPI YoY</span>
+        <span class="detail-value">${f1(cpiYoY)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Unemployment</span>
+        <span class="detail-value">${f1(unrate)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Fed Funds Rate</span>
+        <span class="detail-value">${f2(fedfunds)}</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Yield Spread</span>
+        <span class="detail-value${cls(yspread)}">${f2(yspread)}</span>
+      </div>
+    </div>
+    ${eqR.length === 0 ? '<div class="detail-note">Equity return data unavailable for this period</div>' : ""}
+  `;
+
+  d3.select("#detail-panel-title").style("color", band.color).text(band.label);
+  d3.select("#detail-body").html(html);
+  d3.select("#detail-panel").classed("open", true);
+}
+
+//////////////////////////////////////////////////////////////////
+//  REGIME BAND COMPUTATION
+//////////////////////////////////////////////////////////////////
+function computeRegimeBands(ts, colorMap) {
+  const bands = [];
+  let cur = null;
+  ts.forEach(d => {
+    if (d.regime === null || d.regime === undefined) return;
+    if (!cur || d.regime !== cur.regimeId) {
+      if (cur) bands.push(cur);
+      cur = {
+        regimeId: d.regime, label: d.regime_label, color: colorMap[d.regime],
+        startDate: d.date, endDate: d.date, returns: []
+      };
+    }
+    cur.endDate = d.date;
+    if (d.SP500_return !== null && d.SP500_return !== undefined)
+      cur.returns.push(d.SP500_return);
+  });
+  if (cur) bands.push(cur);
+
+  bands.forEach(b => {
+    b.avgReturn    = b.returns.length ? d3.mean(b.returns) * 100 : null;
+    b.avgVolatility = b.returns.length > 1
+      ? d3.deviation(b.returns) * Math.sqrt(12) * 100 : null;
+  });
+  return bands;
+}
+
+//////////////////////////////////////////////////////////////////
+//  BAND DRAWING HELPER
+//////////////////////////////////////////////////////////////////
+function drawBands(g, bands, innerH, xScale, monthPx, ts) {
+  g.selectAll(".regime-band").remove();
+  g.selectAll(".regime-band")
+    .data(bands)
+    .enter().append("rect")
+      .attr("class", "regime-band")
+      .attr("x",      b => xScale(b.startDate))
+      .attr("width",  b => Math.max(1, xScale(b.endDate) - xScale(b.startDate) + monthPx))
+      .attr("y", 0).attr("height", innerH)
+      .attr("fill",    b => b.color)
+      .attr("opacity", 0.16)
+      .style("cursor", "pointer")
+      .on("mouseover", function(event, b) {
+        d3.select(this).attr("opacity", 0.30);
+        showTooltip(event, b);
+      })
+      .on("mousemove", posTooltip)
+      .on("mouseout",  function() {
+        d3.select(this).attr("opacity", 0.16);
+        hideTooltip();
+      })
+      .on("click", function(event, b) {
+        event.stopPropagation();
+        hideTooltip();
+        openDetailPanel(b, ts);
+      });
+}
+
+//////////////////////////////////////////////////////////////////
+//  MAIN: LOAD DATA & DRAW
+//////////////////////////////////////////////////////////////////
+d3.json("regime_output.json").then(function(data) {
+
+  // ── Color map ──
+  const colorMap = {};
+  data.regimes.forEach(r => { colorMap[r.id] = r.color; });
+
+  // ── Legend ──
+  const legendEl = d3.select("#legend");
+  data.regimes.forEach(r => {
+    const item = legendEl.append("div").attr("class", "legend-item");
+    item.append("div").attr("class", "legend-swatch").style("background", r.color);
+    item.append("span").text(r.label);
+  });
+
+  // ── Parse & enrich time series ──
+  let ts = data.time_series.map(d => ({ ...d, date: parseDate(d.date) }));
+
+  // CPI YoY
+  const cpiByTime = new Map(ts.filter(d => d.CPI !== null).map(d => [d.date.getTime(), d.CPI]));
+  ts.forEach(d => {
+    if (d.CPI === null) { d.CPI_YoY = null; return; }
+    const prior = new Date(d.date);
+    prior.setFullYear(prior.getFullYear() - 1);
+    const cpiPrior = cpiByTime.get(prior.getTime());
+    d.CPI_YoY = cpiPrior != null ? (d.CPI - cpiPrior) / cpiPrior * 100 : null;
+  });
+
+  // Equity cumulative return (indexed 100)
+  let cumVal = 1.0, cumStarted = false;
+  ts.forEach(d => {
+    if (!cumStarted) {
+      if (d.SP500_return !== null && d.SP500_return !== undefined) {
+        cumStarted = true; cumVal *= (1 + d.SP500_return); d.cumReturn = cumVal;
+      } else { d.cumReturn = null; }
+      return;
+    }
+    if (d.SP500_return !== null && d.SP500_return !== undefined) cumVal *= (1 + d.SP500_return);
+    d.cumReturn = cumVal;
+  });
+  const firstCum = ts.find(d => d.cumReturn !== null);
+  if (firstCum) { const b = firstCum.cumReturn; ts.forEach(d => { if (d.cumReturn !== null) d.cumReturn = d.cumReturn / b * 100; }); }
+
+  // Bond cumulative return (indexed 100)
+  let bCumVal = 1.0, bStarted = false;
+  ts.forEach(d => {
+    if (!bStarted) {
+      if (d.bond_return !== null && d.bond_return !== undefined) {
+        bStarted = true; bCumVal *= (1 + d.bond_return); d.bondCumReturn = bCumVal;
+      } else { d.bondCumReturn = null; }
+      return;
+    }
+    if (d.bond_return !== null && d.bond_return !== undefined) bCumVal *= (1 + d.bond_return);
+    d.bondCumReturn = bCumVal;
+  });
+  const firstBCum = ts.find(d => d.bondCumReturn !== null);
+  if (firstBCum) { const b = firstBCum.bondCumReturn; ts.forEach(d => { if (d.bondCumReturn !== null) d.bondCumReturn = d.bondCumReturn / b * 100; }); }
+
+  // ── Shared xScale ──
+  const xScale = d3.scaleTime()
+    .domain(d3.extent(ts, d => d.date))
+    .range([0, INNER_W]);
+
+  // Approximate one-month pixel width
+  const ref = ts[1] ? ts[1].date : new Date();
+  const refNext = new Date(ref); refNext.setMonth(refNext.getMonth() + 1);
+  const monthPx = xScale(refNext) - xScale(ref);
+
+  // ── Regime bands ──
+  const regimeBands = computeRegimeBands(ts, colorMap);
+
+  // ── Close detail panel on Escape or body click ──
+  d3.select("#detail-close").on("click", () => d3.select("#detail-panel").classed("open", false));
+  d3.select("body").on("keydown.detail", e => {
+    if (e.key === "Escape") d3.select("#detail-panel").classed("open", false);
+  });
+
+  //////////////////////////////////////////////////////////////////
+  //  PANEL 1 — Regime Timeline
+  //////////////////////////////////////////////////////////////////
+
+  // Toggle buttons
+  p1Lines.forEach(l => {
+    d3.select("#toggle-bar-p1").append("button")
+      .attr("class", "toggle-btn active")
+      .style("border-color", l.color).style("color", l.color)
+      .text(l.label)
+      .on("click", function() {
+        toggleStateP1[l.key] = !toggleStateP1[l.key];
+        d3.select(this).classed("active", toggleStateP1[l.key]);
+        redrawP1Lines();
+      });
+  });
+
+  const svg1 = d3.select("#panel1").append("svg")
+    .attr("width", TOTAL_W).attr("height", H1 + MT + 36);
+  const g1 = svg1.append("g").attr("transform", `translate(${ML},${MT})`);
+
+  svg1.append("defs").append("clipPath").attr("id", "clip1")
+    .append("rect").attr("width", INNER_W).attr("height", H1);
+
+  // Y scale covers both series
+  const allCumVals = ts.flatMap(d => [d.cumReturn, d.bondCumReturn]).filter(v => v !== null);
+  const cumMin = d3.min(allCumVals), cumMax = d3.max(allCumVals);
+  const y1 = d3.scaleLinear()
+    .domain([Math.min(0, cumMin) * 0.95, cumMax * 1.05])
+    .range([H1, 0]).nice();
+
+  // Grid
+  g1.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y1).ticks(5).tickSize(-INNER_W).tickFormat(""))
+    .select(".domain").remove();
+
+  // Regime bands (drawn first so lines render on top)
+  drawBands(g1, regimeBands, H1, xScale, monthPx, ts);
+
+  // Baseline at 100
+  if (y1.domain()[0] <= 100 && y1.domain()[1] >= 100) {
+    g1.append("line")
+      .attr("x1", 0).attr("x2", INNER_W)
+      .attr("y1", y1(100)).attr("y2", y1(100))
+      .attr("stroke", "#aaa").attr("stroke-dasharray", "4,4").attr("stroke-width", 1);
+  }
+
+  function redrawP1Lines() {
+    p1Lines.forEach(l => {
+      g1.selectAll(`.line-${l.key}`).remove();
+      if (!toggleStateP1[l.key]) return;
+      const gen = d3.line()
+        .defined(d => d[l.key] !== null && d[l.key] !== undefined)
+        .x(d => xScale(d.date))
+        .y(d => y1(d[l.key]));
+      const path = g1.append("path")
+        .datum(ts)
+        .attr("class", `line-${l.key}`)
+        .attr("clip-path", "url(#clip1)")
+        .attr("fill", "none")
+        .attr("stroke", l.color)
+        .attr("stroke-width", l.key === "cumReturn" ? 1.8 : 1.5)
+        .attr("d", gen);
+      if (l.dash) path.attr("stroke-dasharray", l.dash);
+    });
+  }
+  redrawP1Lines();
+
+  g1.append("g").attr("class", "axis").call(d3.axisLeft(y1).ticks(5));
+  g1.append("text").attr("class", "y-label")
+    .attr("transform", "rotate(-90)").attr("x", -H1 / 2).attr("y", -56)
+    .attr("text-anchor", "middle").text("Cumulative Return (base 100)");
+	
+  g1.append("g")
+  .attr("class", "axis")
+  .attr("transform", `translate(0,${H1})`)
+  .call(
+    d3.axisBottom(xScale)
+      .ticks(d3.timeYear.every(2))
+      .tickFormat(d3.timeFormat("%Y")));
+
+  //////////////////////////////////////////////////////////////////
+  //  PANEL 2 — Macro Conditions
+  //////////////////////////////////////////////////////////////////
+  macroLines.forEach(l => {
+    d3.select("#toggle-bar-p2").append("button")
+      .attr("class", "toggle-btn active")
+      .style("border-color", l.color).style("color", l.color)
+      .text(l.label)
+      .on("click", function() {
+        toggleStateP2[l.key] = !toggleStateP2[l.key];
+        d3.select(this).classed("active", toggleStateP2[l.key]);
+        redrawP2Lines();
+      });
+  });
+
+  const svg2 = d3.select("#panel2").append("svg")
+    .attr("width", TOTAL_W).attr("height", H2 + MT + MB_P2);
+  const g2 = svg2.append("g").attr("transform", `translate(${ML},${MT})`);
+
+  svg2.append("defs").append("clipPath").attr("id", "clip2")
+    .append("rect").attr("width", INNER_W).attr("height", H2);
+
+  const allMacroVals = [];
+  ts.forEach(d => macroLines.forEach(l => {
+    const v = d[l.key];
+    if (v !== null && v !== undefined) allMacroVals.push(v);
+  }));
+  const y2 = d3.scaleLinear()
+    .domain([d3.min(allMacroVals) - 1, d3.max(allMacroVals) + 1])
+    .range([H2, 0]).nice();
+
+  g2.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y2).ticks(6).tickSize(-INNER_W).tickFormat(""))
+    .select(".domain").remove();
+
+  drawBands(g2, regimeBands, H2, xScale, monthPx, ts);
+
+  if (y2.domain()[0] <= 0 && y2.domain()[1] >= 0) {
+    g2.append("line")
+      .attr("x1", 0).attr("x2", INNER_W)
+      .attr("y1", y2(0)).attr("y2", y2(0))
+      .attr("stroke", "#bbb").attr("stroke-dasharray", "4,4").attr("stroke-width", 1);
+  }
+
+  function redrawP2Lines() {
+    macroLines.forEach(l => {
+      g2.selectAll(`.line-${l.key}`).remove();
+      if (!toggleStateP2[l.key]) return;
+      const gen = d3.line()
+        .defined(d => d[l.key] !== null && d[l.key] !== undefined)
+        .x(d => xScale(d.date)).y(d => y2(d[l.key]));
+      g2.append("path").datum(ts)
+        .attr("class", `line-${l.key}`)
+        .attr("clip-path", "url(#clip2)")
+        .attr("fill", "none").attr("stroke", l.color).attr("stroke-width", 1.6)
+        .attr("d", gen);
+    });
+  }
+  redrawP2Lines();
+
+  g2.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${H2})`)
+    .call(d3.axisBottom(xScale).ticks(d3.timeYear.every(2)).tickFormat(d3.timeFormat("%Y")));
+  g2.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y2).ticks(6).tickFormat(d => d + "%"));
+  g2.append("text").attr("class", "y-label")
+    .attr("transform", "rotate(-90)").attr("x", -H2 / 2).attr("y", -56)
+    .attr("text-anchor", "middle").text("Indicator Value (%)");
+
+  //////////////////////////////////////////////////////////////////
+  //  PANEL 3 — Regime Summary (2 rows × 3 cols)
+  //////////////////////////////////////////////////////////////////
+  const stats = data.state_statistics.slice().sort((a, b) => a.regime_id - b.regime_id);
+  const miniW  = Math.floor(INNER_W / 3);
+
+  const svg3 = d3.select("#panel3").append("svg")
+    .attr("width", TOTAL_W).attr("height", H3_SVG);
+  const g3 = svg3.append("g").attr("transform", `translate(${ML},${MT_P3})`);
+
+  const shortLabel = l =>
+    l === "Low-Vol Growth"  ? "Growth" :
+    l === "High-Vol Crisis" ? "Crisis" : "Trans.";
+
+  metrics.forEach(metric => {
+    const rowOffset = metric.row * (BAR_H + ROW_GAP);
+    const colOffset = metric.col * miniW;
+    const gm = g3.append("g").attr("transform", `translate(${colOffset},${rowOffset})`);
+    const mw = miniW - 18;
+
+    // Skip if data missing in stats
+    const scaledVals = stats.map(s => {
+      const v = s[metric.key];
+      return (v !== null && v !== undefined) ? metric.scale(v) : null;
+    }).filter(v => v !== null);
+
+    if (scaledVals.length === 0) return;
+
+    const xBand = d3.scaleBand()
+      .domain(stats.map(s => s.label))
+      .range([0, mw]).padding(0.3);
+
+    const yMin = Math.min(0, d3.min(scaledVals));
+    const yMax = d3.max(scaledVals);
+    const yPad = Math.abs(yMax - yMin) * 0.15 || 0.5;
+    const yM = d3.scaleLinear()
+      .domain([yMin - yPad, yMax + yPad])
+      .range([BAR_H, 0]).nice();
+
+    // Bars
+    gm.selectAll(".bar").data(stats).enter().append("rect")
+      .attr("class", "bar")
+      .attr("x",     s => xBand(s.label))
+      .attr("width", xBand.bandwidth())
+      .attr("y", s => {
+        const v = s[metric.key];
+        if (v === null || v === undefined) return yM(0);
+        const sv = metric.scale(v);
+        return sv >= 0 ? yM(sv) : yM(0);
+      })
+      .attr("height", s => {
+        const v = s[metric.key];
+        if (v === null || v === undefined) return 0;
+        return Math.abs(yM(metric.scale(v)) - yM(0));
+      })
+      .attr("fill",    s => colorMap[s.regime_id])
+      .attr("rx", 3).attr("opacity", 0.82);
+
+    // Zero line
+    gm.append("line")
+      .attr("x1", 0).attr("x2", mw)
+      .attr("y1", yM(0)).attr("y2", yM(0))
+      .attr("stroke", "#ccc").attr("stroke-width", 1);
+
+    // Value labels
+    gm.selectAll(".bar-label").data(stats).enter().append("text")
+      .attr("class", "bar-label")
+      .attr("x", s => xBand(s.label) + xBand.bandwidth() / 2)
+      .attr("y", s => {
+        const v = s[metric.key];
+        if (v === null || v === undefined) return yM(0) - 4;
+        const sv = metric.scale(v);
+        return (sv >= 0 ? yM(sv) : yM(0)) - 4;
+      })
+      .attr("text-anchor", "middle")
+      .attr("font-size", "10px").attr("fill", "#333")
+      .text(s => {
+        const v = s[metric.key];
+        return (v !== null && v !== undefined) ? metric.fmt(v) : "—";
+      });
+
+    // X axis
+    gm.append("g").attr("class", "axis")
+      .attr("transform", `translate(0,${BAR_H})`)
+      .call(d3.axisBottom(xBand).tickFormat(shortLabel))
+      .selectAll("text").attr("font-size", "10px");
+    gm.selectAll(".axis .domain, .axis .tick line").attr("stroke", "#ddd");
+
+    // Chart title
+    gm.append("text")
+      .attr("x", mw / 2).attr("y", -14)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "11px").attr("font-weight", "700").attr("fill", "#444")
+      .text(metric.label);
+
+    gm.append("text")
+      .attr("x", mw / 2).attr("y", -3)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "9px").attr("fill", "#999")
+      .text("by regime");
+  });
+
+  // Row separators / labels
+  ["Equity Performance", "Cross-Asset & Macro"].forEach((title, i) => {
+    g3.append("text")
+      .attr("x", -ML + 8)
+      .attr("y", i * (BAR_H + ROW_GAP) - 4)
+      .attr("font-size", "9px").attr("font-weight", "700")
+      .attr("fill", "#aaa").attr("text-transform", "uppercase")
+      .attr("letter-spacing", "0.8px")
+      .text(title.toUpperCase());
+  });
+
+}).catch(function(err) {
+  document.body.innerHTML = `
+    <div style="padding:40px;font-family:monospace;color:#c0392b;">
+      <h2> Could not load regime_output.json</h2>
+      <p style="margin-top:12px;">Run the Python model first:</p>
+      <pre style="margin-top:8px;background:#fdf;padding:12px;border-radius:4px;">python hmm_model.py</pre>
+      <p style="margin-top:12px;">Then serve via localhost:</p>
+      <pre style="margin-top:8px;background:#fdf;padding:12px;border-radius:4px;">python3 -m http.server 8000</pre>
+      <p style="margin-top:8px;color:#555;">Error: ${err}</p>
+    </div>`;
+});
+</script>
+</body>
+</html>
